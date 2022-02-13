@@ -155,10 +155,6 @@ input:checked + .slider {
   background-color: var(--secondary-color);
 }
  
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
- 
 /*  ________                        
    /  _/ __/________ _____ ___  ___ 
    / // /_/ ___/ __ `/ __ `__ \/ _ \
