@@ -1,0 +1,111 @@
+* {
+    color: white;
+    white-space: pre;
+    background: #1e1e1e;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0;
+}
+
+/* ______          __                             
+  / ____/___  ____/ /__     ____ _________  ____ _
+ / /   / __ \/ __  / _ \   / __ `/ ___/ _ \/ __ `/
+/ /___/ /_/ / /_/ /  __/  / /_/ / /  /  __/ /_/ / 
+\____/\____/\__,_/\___/   \__,_/_/   \___/\__,*/
+
+pre.line-numbers {
+	position: absolute;
+    top: 0;
+    left: 64px;
+	counter-reset: linenumber;
+	padding-bottom: 1px;
+}
+
+pre.line-numbers > code {
+	position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 18px;
+	left: -208px;
+	width: 40px;
+}
+
+.line-numbers-rows > span {
+	display: block;
+	counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+	content: counter(linenumber);
+	color: #858585;
+	display: block;
+	padding-right: 0.8em;
+	text-align: right;
+}
+
+a {
+    text-decoration: none;
+    color: #ce9167;
+    cursor: text;
+}
+
+.comment{
+    color: #679951;
+}
+
+.dark-blue{
+    color: #2a68bf;
+}
+
+.blue {
+    color: #44c1f7;
+}
+
+.light-blue {
+    color: #6cd0fe;
+}
+
+.yellow {
+    color: #dcdcaa;
+}
+
+.purple {
+    color: #c586c0;
+}
+
+.green {
+    color: #3dc3b0;
+}
+
+.light-green {
+    color: #8cdda1;
+}
+
+.val {
+    color: #ce9167;
+}
+
+/* _____                 ____   __              
+  / ___/______________  / / /  / /_  ____ ______
+  \__ \/ ___/ ___/ __ \/ / /  / __ \/ __ `/ ___/
+ ___/ / /__/ /  / /_/ / / /  / /_/ / /_/ / /    
+/____/\___/_/   \____/_/_/  /_.___/\__,_/*/
+
+::-webkit-scrollbar {
+    width: 10px;
+    cursor: pointer;
+}
+  
+::-webkit-scrollbar-track {
+    background: #00000000;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #9696967e;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #bebebe;
+}
