@@ -1,40 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang = 'en'>
     <head>
-      <meta charset="utf-8"/>
-      <link rel="stylesheet" href="css/style.css"/>
-      <title>Galaad - Homepage</title>
-      <link rel="icon" href="https://avatars.githubusercontent.com/u/75391703?v=4" sizes="32x32">
-      <script src="js/script.js"></script>
-      <script src="https://kit.fontawesome.com/a136dca9fc.js" crossorigin="anonymous"></script>
+      <meta charset = 'utf-8'/>
+
+      <!-- ︵‿୨♡୧‿︵ My files imports ︵‿୨♡୧‿︵ -->
+      <link rel = 'stylesheet' href = 'css/style.css'/>
+      <script src = 'js/script.js'></script>
+
+      <!-- ︵‿୨♡୧‿︵ Tab settings ︵‿୨♡୧‿︵ -->
+      <title> Violette - Homepage </title>
+      <link rel = 'icon' href = 'https://avatars.githubusercontent.com/u/75391703?v = 4' sizes = '32x32'>
+
+      <!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script> -->
     </head>
 
     <body>
+
       <header>
-        <!-- Navigation -->
-        <nav id="navbar">
-          <a class="menulink item active" href="home.html">Galaad Takayuki</a>
-          <a class="menulink item" href="portfolio.html">Portfolio</a>
-          <a class="menulink item" href="https://github.com/ImGalaad" target="_blank"><i class="fab fa-github icon"></i>GitHub</a>
-          <!-- Switcher -->
-          <div class="theme-switch-wrapper">
-            <label class="theme-switch" for="checkbox">
-              <input id="checkbox" type="checkbox" onclick="toggleTheme()"/>
-              <div class="slider"></div>
+
+      <!-- ︵‿୨♡୧‿︵ Navigation ︵‿୨♡୧‿︵ -->
+        <nav id = 'navbar'>
+
+            <!-- ︵‿୨♡୧‿︵ Profil Picture ︵‿୨♡୧‿︵ -->
+            <img class = 'avatar' alt = 'Avatar' src = 'https://avatars.githubusercontent.com/u/75391703?v = 4'>
+
+            <p class = 'pseudo'>@violette</p>
+            <!-- <a class = 'menulink item' href = 'https://github.com/ImGalaad' target = '_blank'>GitHub</a> -->
+
+            <!-- ︵‿୨♡୧‿︵ Switcher ︵‿୨♡୧‿︵ -->
+            <label class = 'theme-switch' for = 'checkbox'>
+              <input id = 'checkbox' type = 'checkbox' onclick = 'toggleTheme()'/>
+              <div class = 'slider'></div>
             </label>
-          </div>
+
         </nav>
       </header>
-      <div class="page">
-        <div class="wrapper">
-            <div class="profil" style="display: flex; margin-bottom: 20px;">
-              <div class="name">
-                <h1>Galaad Takayuki</h1>
-                <p>French Informatic Creator</p>
+
+      <!-- ︵‿୨♡୧‿︵ Main Page ︵‿୨♡୧‿︵ -->
+        <div class = 'page'>
+        
+            <!-- ︵‿୨♡୧‿︵ Clock ︵‿୨♡୧‿︵ -->
+            <div class = 'now'>
+              <img src='images/clock-background.png' alt='Cute Bear Image'>
+              <div class='clock'>
+                <div class = 'date'></div>
+                <div class = 'hour'></div>
+                <div class = 'day'></div>
               </div>
-              <img class="avatar" alt="Avatar" src="https://avatars.githubusercontent.com/u/75391703?v=4">
             </div>
-            <iframe src="cv.html"></iframe>
-        </div>
+
+            <!-- ︵‿୨♡୧‿︵ Plants Carousel ︵‿୨♡୧‿︵ -->
+            <div class = "slider-container">
+              <div class = "menu">
+                <label for = "slide-point-plants-1"></label>
+                <label for = "slide-point-plants-2"></label>
+                <label for = "slide-point-plants-3"></label>
+                <label for = "slide-point-plants-4"></label>
+                <label for = "slide-point-plants-5"></label>
+                <label for = "slide-point-plants-6"></label>
+              </div>
+              <input id = "slide-point-plants-1" type = "radio" name = "slides-plants" checked><div class = "slide slide-plants-1"></div>
+              <input id = "slide-point-plants-2" type = "radio" name = "slides-plants"><div class = "slide slide-plants-2"></div>
+              <input id = "slide-point-plants-3" type = "radio" name = "slides-plants"><div class = "slide slide-plants-3"></div>
+              <input id = "slide-point-plants-4" type = "radio" name = "slides-plants"><div class = "slide slide-plants-4"></div>
+              <input id = "slide-point-plants-5" type = "radio" name = "slides-plants"><div class = "slide slide-plants-5"></div>
+              <input id = "slide-point-plants-6" type = "radio" name = "slides-plants"><div class = "slide slide-plants-6"></div>
+            </div>
+
+            <!-- ︵‿୨♡୧‿︵ Windows 95 Paint.net ︵‿୨♡୧‿︵ -->
+            <img src = "images/win95paint.png" alt = "Windows 95 Pain.NET Image" class = "image">
+
+            <!-- ︵‿୨♡୧‿︵ Otter Carousel ︵‿୨♡୧‿︵ -->
+            <div class = "slider-container">
+              <div class = "menu">
+                <label for = "slide-point-otter-1"></label>
+                <label for = "slide-point-otter-2"></label>
+                <label for = "slide-point-otter-3"></label>
+                <label for = "slide-point-otter-4"></label>
+                <label for = "slide-point-otter-5"></label>
+                <label for = "slide-point-otter-6"></label>
+              </div>
+              <input id = "slide-point-otter-1" type = "radio" name = "slides-otter" checked><div class = "slide slide-otter-1"></div>
+              <input id = "slide-point-otter-2" type = "radio" name = "slides-otter"><div class = "slide slide-otter-2"></div>
+              <input id = "slide-point-otter-3" type = "radio" name = "slides-otter"><div class = "slide slide-otter-3"></div>
+              <input id = "slide-point-otter-4" type = "radio" name = "slides-otter"><div class = "slide slide-otter-4"></div>
+              <input id = "slide-point-otter-5" type = "radio" name = "slides-otter"><div class = "slide slide-otter-5"></div>
+              <input id = "slide-point-otter-6" type = "radio" name = "slides-otter"><div class = "slide slide-otter-6"></div>
+            </div>
+
+            <!-- ︵‿୨♡୧‿︵ Curriculum vitæ ︵‿୨♡୧‿︵ -->
+
+            <!-- ︵‿୨♡୧‿︵ Social Media ︵‿୨♡୧‿︵ -->
+
+            <!-- ︵‿୨♡୧‿︵ Projects ︵‿୨♡୧‿︵ -->
+
+        <!-- <div class="elfsight-app-75d25d03-52ff-4383-8560-c9445a509d1d"></div> -->
       </div>
+
   </body>
+
+</html>
