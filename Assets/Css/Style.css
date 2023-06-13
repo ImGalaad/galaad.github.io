@@ -1,0 +1,136 @@
+/* Themes */
+
+:root {
+  /* https://coolors.co/151b13-373342-df8758-869d7a-f3c2cb */
+  --pad: max(20px, 4vmin);
+  --eerie: #151b13;
+  --raisin: #373342;
+  --persian: #df8758;
+  --moss: #869d7a;
+  --fairy: #f3c2cb;
+}
+
+.olive {
+  --bg: var(--eerie);
+  --fg: var(--fairy);
+}
+
+.fairy {
+  --bg: var(--fairy);
+  --fg: var(--eerie);
+}
+
+.persian {
+  --bg: var(--persian);
+  --fg: var(--eerie);
+}
+
+.raisin {
+  --bg: var(--raisin);
+  --fg: var(--fairy);
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 200;
+  src: url("/Assets/Font/Roboto-Thin.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--fg);
+  font-family: "Roboto";
+  transition: color 2s, background 2s, backgroud-color 2s;
+}
+
+body {
+  background: var(--bg);
+  height: 100%;
+}
+
+#frame {
+  border: var(--fg) solid 1px;
+  left: var(--pad);
+  right: var(--pad);
+  top: var(--pad);
+  bottom: var(--pad);
+  position: fixed;
+  padding: var(--pad);
+  z-index: 0;
+}
+
+header h1 {
+  font-size: 60px;
+  font-weight: 100;
+}
+
+canvas#bg {
+  background: transparent;
+  left: var(--pad);
+  top: var(--pad);
+  z-index: -1;
+  position: fixed;
+}
+
+#themesHandler {
+  position: fixed;
+  left: calc(var(--pad) - 0.08em);
+  bottom: var(--pad);
+  transform-origin: left bottom;
+  transform: rotate(-90deg);
+  display: flex;
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+#themesHandler div {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+#themesHandler div::before {
+  font-size: 20px;
+  margin-left: 12px;
+  margin-right: 4px;
+  content: var(--before-content);
+}
+
+#pagesHandler span {
+  text-transform: capitalize;
+  line-height: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+#pagesHandler span::before {
+  content: "• ";
+}
+
+#pageDisplay div {
+  position: absolute;
+  top: var(--pad);
+  right: var(--pad);
+  width: 50vw;
+  font-size: 22px;
+  font-weight: 600;
+  transition: opacity 1s;
+}
+
+#github {
+  fill: var(--fg);
+  bottom: var(--pad);
+  right: var(--pad);
+  position: absolute;
+  transition: transform 1s;
+  transform: scale(1.2);
+}
+
+#github:hover {
+  transform: scale(1.5);
+}
