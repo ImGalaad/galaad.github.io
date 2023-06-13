@@ -115,7 +115,8 @@ switchPage(Object.entries(pages)[0][0]);
 
 const themes = ["olive", "persian", "fairy", "raisin"];
 const themesHandler = document.getElementById("themesHandler");
-let themeIndex = 0 || themes.indexOf(localStorage.getItem("theme")) - 1;
+if (localStorage.getItem("theme") === null) {let themeIndex = 0}
+else {let themeIndex = 0 || themes.indexOf(localStorage.getItem("theme")) - 1;}
 
 themes.forEach((thm) => {
   const child = document.createElement("div");
