@@ -65,10 +65,6 @@ setTimeout(() => {
   document.querySelector("#loading").style.opacity = "0";
 }, 600);
 
-setTimeout(() => {
-  document.querySelector("#loading").style.display = "none";
-}, 1600)
-
 /*
  __   __  ______  __  ______  ______    
 /\ "-.\ \/\  __ \/\ \/\  ___\/\  ___\   
