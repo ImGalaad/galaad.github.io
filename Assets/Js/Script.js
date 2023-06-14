@@ -1,8 +1,22 @@
-/* Utils */
+/*
+ __  __  ______ __  __      ______    
+/\ \/\ \/\__  _/\ \/\ \    /\  ___\   
+\ \ \_\ \/_/\ \\ \ \ \ \___\ \___  \  
+ \ \_____\ \ \_\\ \_\ \_____\/\_____\ 
+  \/_____/  \/_/ \/_/\/_____/\/_____/ 
+                                      
+*/
 
 const closestPowerOf2 = (n) => Math.pow(2, Math.ceil(Math.log2(n)));
 
-/* Background */
+/*
+ __   __  ______  __  ______  ______    
+/\ "-.\ \/\  __ \/\ \/\  ___\/\  ___\   
+\ \ \-.  \ \ \/\ \ \ \ \___  \ \  __\   
+ \ \_\\"\_\ \_____\ \_\/\_____\ \_____\ 
+  \/_/ \/_/\/_____/\/_/\/_____/\/_____/ 
+                                        
+*/
 
 const frame = document.getElementById("frame");
 let width = frame.offsetWidth;
@@ -41,7 +55,25 @@ function loop() {
 
 requestAnimationFrame(loop);
 
-/* Pages */
+addEventListener("resize", (event) => {
+  width = frame.offsetWidth;
+  height = frame.offsetHeight;
+
+  ctx.canvas.width = width;
+  ctx.canvas.height = height;
+
+  index = closestPowerOf2(width * 0.1);
+
+  imgData = ctx.createImageData(width, height);
+});
+
+/*
+ ______ ______  ______  ______  ______    
+/\  __ /\  __ \/\  ___\/\  ___\/\  ___\   
+\ \  _-\ \  __ \ \ \__ \ \  __\\ \___  \  
+ \ \_\  \ \_\ \_\ \_____\ \_____\/\_____\ 
+  \/_/   \/_/\/_/\/_____/\/_____/\/_____/ 
+*/
 
 const pages = {
   home: `Born in 2000's, in France.
@@ -111,12 +143,22 @@ function switchPage(page) {
 
 switchPage(Object.entries(pages)[0][0]);
 
-/* Themes */
+/*
+ ______ __  __  ______  __    __  ______  ______    
+/\__  _/\ \_\ \/\  ___\/\ "-./  \/\  ___\/\  ___\   
+\/_/\ \\ \  __ \ \  __\\ \ \-./\ \ \  __\\ \___  \  
+   \ \_\\ \_\ \_\ \_____\ \_\ \ \_\ \_____\/\_____\ 
+    \/_/ \/_/\/_/\/_____/\/_/  \/_/\/_____/\/_____/ 
+                                                    
+*/
 
 const themes = ["olive", "persian", "fairy", "raisin"];
 const themesHandler = document.getElementById("themesHandler");
-if (localStorage.getItem("theme") === null) {let themeIndex = 0}
-else {let themeIndex = 0 || themes.indexOf(localStorage.getItem("theme")) - 1;}
+
+let themeIndex = 0;
+if (localStorage.getItem("theme")) {
+  themeIndex = themes.indexOf(localStorage.getItem("theme")) - 1;
+}
 
 themes.forEach((thm) => {
   const child = document.createElement("div");
@@ -143,17 +185,3 @@ function switchTheme() {
 }
 
 switchTheme();
-
-/* Specials events */
-
-addEventListener("resize", (event) => {
-  width = frame.offsetWidth;
-  height = frame.offsetHeight;
-
-  ctx.canvas.width = width;
-  ctx.canvas.height = height;
-
-  index = closestPowerOf2(width * 0.1);
-
-  imgData = ctx.createImageData(width, height);
-});

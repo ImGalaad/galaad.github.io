@@ -119,7 +119,7 @@ canvas#bg {
   width: 50vw;
   font-size: 22px;
   font-weight: 600;
-  transition: opacity 1s;
+  transition: opacity 1s, color 2s;
 }
 
 #github {
@@ -127,10 +127,45 @@ canvas#bg {
   bottom: var(--pad);
   right: var(--pad);
   position: absolute;
-  transition: transform 1s;
+  transition: transform 1s, fill 2s;
   transform: scale(1.2);
 }
 
 #github:hover {
   transform: scale(1.5);
+}
+
+@media screen and (max-width: 620px) {
+  #pageDisplay div {
+    width: 80vw;
+    font-size: 3vw;
+    margin-top: 22px;
+    top: auto;
+    right: auto;
+  }
+
+  header h1 {
+    font-size: 9.5vw;
+  }
+
+  header h3 {
+    font-size: 3vw;
+  }
+
+  #themesHandler {
+    transform: rotate(0deg);
+  }
+
+  #themesHandler div {
+    font-size: 3vw;
+  }
+
+  #themesHandler div::before {
+    font-size: 3.8vw;
+  }
+
+  #pagesHandler span {
+    font-size: 2.8vw;
+    line-height: 4.2vw;
+  }
 }
