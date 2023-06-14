@@ -60,7 +60,9 @@ body {
   font-size: 5vw;
   font-weight: 900;
   background: black;
+  pointer-events: none;
   transition: opacity 1s;
+  
 }
 
 #loading h1 {
