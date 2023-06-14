@@ -63,8 +63,11 @@ const closestPowerOf2 = (n) => Math.pow(2, Math.ceil(Math.log2(n)));
 
 setTimeout(() => {
   document.querySelector("#loading").style.opacity = "0";
-  /* document.querySelector("#loading").style.display = "none"; */
 }, 600);
+
+setTimeout(() => {
+  document.querySelector("#loading").style.display = "none";
+}, 1600)
 
 /*
  __   __  ______  __  ______  ______    
