@@ -49,6 +49,32 @@ body {
   height: 100%;
 }
 
+#loading {
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  position: fixed;
+  font-size: 5vw;
+  font-weight: 900;
+  background: black;
+  transition: opacity 1s;
+}
+
+#loading h1 {
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+}
+
+#loading h1 span {
+  opacity: 0.5;
+  margin-left: 20px;
+}
+
 #frame {
   border: var(--fg) solid 1px;
   left: var(--pad);

@@ -1,4 +1,47 @@
 /*
+ ______ __  __  ______  __    __  ______  ______    
+/\__  _/\ \_\ \/\  ___\/\ "-./  \/\  ___\/\  ___\   
+\/_/\ \\ \  __ \ \  __\\ \ \-./\ \ \  __\\ \___  \  
+   \ \_\\ \_\ \_\ \_____\ \_\ \ \_\ \_____\/\_____\ 
+    \/_/ \/_/\/_/\/_____/\/_/  \/_/\/_____/\/_____/ 
+                                                    
+*/
+
+const themes = ["olive", "persian", "fairy", "raisin"];
+const themesHandler = document.getElementById("themesHandler");
+
+let themeIndex = 0;
+if (localStorage.getItem("theme")) {
+  themeIndex = themes.indexOf(localStorage.getItem("theme")) - 1;
+}
+
+themes.forEach((thm) => {
+  const child = document.createElement("div");
+  child.textContent = child.id = thm;
+  themesHandler.appendChild(child);
+});
+
+const themesTexts = themesHandler.querySelectorAll("div");
+
+function switchTheme() {
+  themeIndex++;
+  themeIndex %= themes.length;
+
+  let theme = themes[themeIndex];
+
+  localStorage.setItem("theme", theme);
+  document.documentElement.className = theme;
+
+  themesTexts.forEach((child, index) => {
+    if (index === themeIndex)
+      child.style.setProperty("--before-content", '"■"');
+    else child.style.setProperty("--before-content", '"□"');
+  });
+}
+
+switchTheme();
+
+/*
  __  __  ______ __  __      ______    
 /\ \/\ \/\__  _/\ \/\ \    /\  ___\   
 \ \ \_\ \/_/\ \\ \ \ \ \___\ \___  \  
@@ -8,6 +51,20 @@
 */
 
 const closestPowerOf2 = (n) => Math.pow(2, Math.ceil(Math.log2(n)));
+
+/*
+ __      ______  ______  _____   __  __   __  ______    
+/\ \    /\  __ \/\  __ \/\  __-./\ \/\ "-.\ \/\  ___\   
+\ \ \___\ \ \/\ \ \  __ \ \ \/\ \ \ \ \ \-.  \ \ \__ \  
+ \ \_____\ \_____\ \_\ \_\ \____-\ \_\ \_\\"\_\ \_____\ 
+  \/_____/\/_____/\/_/\/_/\/____/ \/_/\/_/ \/_/\/_____/ 
+                                                        
+*/
+
+setTimeout(() => {
+  document.querySelector("#loading").style.opacity = "0";
+  /* document.querySelector("#loading").style.display = "none"; */
+}, 600);
 
 /*
  __   __  ______  __  ______  ______    
@@ -142,46 +199,3 @@ function switchPage(page) {
 }
 
 switchPage(Object.entries(pages)[0][0]);
-
-/*
- ______ __  __  ______  __    __  ______  ______    
-/\__  _/\ \_\ \/\  ___\/\ "-./  \/\  ___\/\  ___\   
-\/_/\ \\ \  __ \ \  __\\ \ \-./\ \ \  __\\ \___  \  
-   \ \_\\ \_\ \_\ \_____\ \_\ \ \_\ \_____\/\_____\ 
-    \/_/ \/_/\/_/\/_____/\/_/  \/_/\/_____/\/_____/ 
-                                                    
-*/
-
-const themes = ["olive", "persian", "fairy", "raisin"];
-const themesHandler = document.getElementById("themesHandler");
-
-let themeIndex = 0;
-if (localStorage.getItem("theme")) {
-  themeIndex = themes.indexOf(localStorage.getItem("theme")) - 1;
-}
-
-themes.forEach((thm) => {
-  const child = document.createElement("div");
-  child.textContent = child.id = thm;
-  themesHandler.appendChild(child);
-});
-
-const themesTexts = themesHandler.querySelectorAll("div");
-
-function switchTheme() {
-  themeIndex++;
-  themeIndex %= themes.length;
-
-  let theme = themes[themeIndex];
-
-  localStorage.setItem("theme", theme);
-  document.documentElement.className = theme;
-
-  themesTexts.forEach((child, index) => {
-    if (index === themeIndex)
-      child.style.setProperty("--before-content", '"■"');
-    else child.style.setProperty("--before-content", '"□"');
-  });
-}
-
-switchTheme();
