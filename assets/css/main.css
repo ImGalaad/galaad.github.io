@@ -7,6 +7,16 @@ body {
   font-family: sans-serif;
   min-height: 100vh;
 }
+@media only screen and (max-width: 1000px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
 
 a {
   color: #e0ebec;
@@ -19,18 +29,28 @@ a:hover {
   background-image: linear-gradient(180deg, transparent 50%, #ba77a2 50%) !important;
 }
 a[target=_blank]::after {
-  content: " 🡥";
+  content: " 🡕";
 }
 
+@media only screen and (max-width: 1000px) {
+  ul {
+    padding-left: 1.75rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  ul {
+    padding-left: 1.25rem;
+  }
+}
 ul li {
   line-height: 1.8;
 }
 
 #sidebar {
   height: 100vh;
+  width: 360px;
   position: fixed;
   background: #121414;
-  width: 360px;
   display: flex;
   flex-direction: column;
   /* #search {
@@ -39,14 +59,40 @@ ul li {
     cursor: pointer;
   } */
 }
+@media only screen and (max-width: 1000px) {
+  #sidebar {
+    height: 12rem;
+    width: 100vw;
+    flex-direction: row;
+    z-index: 1;
+  }
+}
 #sidebar img {
   width: calc(360px - 2rem * 2);
+}
+@media only screen and (max-width: 1000px) {
+  #sidebar img {
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    left: 2rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #sidebar img {
+    display: none;
+  }
 }
 #sidebar nav {
   flex-grow: 1;
   padding: 2rem;
   text-align: center;
   height: 100px;
+}
+@media only screen and (max-width: 1000px) {
+  #sidebar nav #about {
+    height: 70px;
+  }
 }
 #sidebar nav #about > a {
   font-size: 3rem;
@@ -58,15 +104,33 @@ ul li {
   font-family: serif;
   font-weight: bold;
 }
-#sidebar nav > a {
+@media only screen and (max-width: 1000px) {
+  #sidebar nav #about > a {
+    font-size: 1.75rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #sidebar nav > #links {
+    width: 55vw;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #sidebar nav > #links {
+    width: 80vw;
+  }
+}
+#sidebar nav > #links > a {
   background-image: none !important;
-  /* &:hover {
-    text-decoration: underline;
-  } */
 }
 #sidebar footer {
   text-align: center;
   padding: 2rem;
+}
+@media only screen and (max-width: 1000px) {
+  #sidebar footer {
+    display: none;
+  }
 }
 #sidebar footer > * {
   margin: 0 0.75rem;
@@ -81,9 +145,22 @@ ul li {
 }
 
 main {
-  width: min(calc(min(960px, 90vw) - 5rem), calc(100vw - 5rem - 20px - 360px));
   padding: 4rem 0;
   margin-left: calc(360px + 5rem);
+  width: min(calc(min(960px, 90vw) - 5rem), calc(100vw - 5rem - 20px - 360px));
+}
+@media only screen and (max-width: 1000px) {
+  main {
+    padding: calc(1rem + 12rem) 0 1rem 0;
+    margin-left: 2rem;
+    width: calc(100vw - 2rem - 20px);
+  }
+}
+@media only screen and (max-width: 600px) {
+  main {
+    margin-left: 1rem;
+    width: calc(100vw - 1rem - 20px);
+  }
 }
 main h1 {
   font-style: italic;
@@ -104,6 +181,16 @@ pre {
   padding: 0.5rem;
   border-radius: 6px;
 }
+@media only screen and (max-width: 1000px) {
+  pre {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  pre {
+    font-size: 12px;
+  }
+}
 pre #prompt {
   color: #cba6f7;
 }
@@ -118,7 +205,12 @@ pre .operator {
 }
 html.is-animating .transition-main {
   opacity: 0;
+  transform: translateX(-1em);
 }
+html.is-leaving .transition-main {
+  transform: translateX(1em);
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }

@@ -5,14 +5,16 @@
             <a id="" href="/">Violette</a>
         </section>
 
-        {% for page in collections.root %}
-            <a href="{{ page.url }}">{{ page.data.title }}</a> •
-        {% endfor %}
+        <section id="links">
+            {% for page in collections.root %}
+                <a href="{{ page.url }}">{{ page.data.title }}</a> •
+            {% endfor %}
 
-        <a target="_blank" href="https://github.com/imsumire/">Github</a>
-        •
-        <a target="_blank" href="https://www.pinterest.fr/Violettttte/">Pinterest</a>
-        {% comment %} <img src="/assets/icons/search.svg" id="search" alt="Search icon"> {% endcomment %}
+            <a target="_blank" href="https://github.com/imsumire/">Github</a>
+            •
+            <a target="_blank" href="https://www.pinterest.fr/Violettttte/">Pinterest</a>
+            {% comment %} <img src="/assets/icons/search.svg" id="search" alt="Search icon"> {% endcomment %}
+        </section>
     </nav>
     {% include "footer.liquid" %}
 </div>

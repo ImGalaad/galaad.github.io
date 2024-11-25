@@ -16,14 +16,16 @@ Here, you’ll find a collection of random blogs, quirky projects, and occasiona
 
 <u>Tech Stack</u>
 
-- **OS**: <a target="_blank" href="https://ubuntu.com/">Ubuntu</a> but I'll install <a target="_blank" href="https://fedoraproject.org/spins/lxqt">Fedora LXQt</a> soon
+- **Laptop**: <a target="_blank" href="https://consumer.huawei.com/en/laptops/matebook-d-14-amd-2021/">Huawei Matebook D14</a>
+- **OS**: <a target="_blank" href="https://ubuntu.com/">Ubuntu</a> but I'll install <a target="_blank" href="https://fedoraproject.org">Fedora</a> soon
 - **Shell**: <a target="_blank" href="https://fishshell.com/">Fish</a> with <a target="_blank" href="https://github.com/IlanCosman/tide">Tide</a>
 - **Theme**: <a target="_blank" href="https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme">Catppuccin Macchiato Lavender</a>
 - **Icons**: <a target="_blank" href="https://www.gnome-look.org/p/2139476">Colloid Pastel Dark</a>
+- **Cursor**: <a target="_blank" href="https://store.kde.org/p/999959/">Wii Cursors</a>
 
 <u>Languages</u>
 
-- **Programming**: C, Rust, Glsl, Python, TypeScript
+- **Programming**: C, C++, Rust, Glsl, Python, TypeScript
 - **Markup**: HTML, SCSS, JSON, YAML, TOML, LaTeX, Markdown
 - **Real**: French, English, Swedish (learning) and Russian (learning too)
 
@@ -32,8 +34,8 @@ Here, you’ll find a collection of random blogs, quirky projects, and occasiona
 - **Hobbies**: Cooking, Gaming, Coding, Watching Series/Movies
 - **Music**: Breakcore, Tech, Pop, Epic, Phonk, Chill
 - **Animals**: Cats, Otters, Red Pandas, Foxes, Bears
-- **Code**: Low-Level, Shaders, Games, Optimizations
-- **Games**: Minecraft, Project Zomboid, Stardew Valley, Zelda: Breath of the Wild
+- **Code**: Low-Level, Shaders, Games, Optimizations, Retro-Games
+- **Games**: Minecraft, Lethal Company, Stardew Valley, Zelda: Breath of the Wild, Project Zomboid
 
 <u>Social</u>
 

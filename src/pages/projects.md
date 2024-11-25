@@ -15,3 +15,12 @@ Emoria is an immersive, survival-based isometric game drawing inspiration from Z
 Floral is a beginner-friendly programming language designed to introduce foundational programming concepts through a minimalist syntax and a straightforward environment. Floral supports essential features like polymorphism, compile-time memory management using a borrowing and ownership model, and requires no runtime garbage collection, making it both efficient and accessible. It combines simplicity with power, aiming to empower new developers to create and understand complex programs without the overhead of more advanced languages.
 
 Inspirated by <a target="_blank" href="https://nim-lang.org/">Nim</a> and <a target="_blank" href="https://www.rust-lang.org/">Rust</a>
+
+## Radiance
+Radiance is a lightweight, low-level game engine designed for developers seeking complete control over their projects. Built on Rust for unmatched safety and performance, and powered by Raylib for simple and efficient rendering, Radiance emphasizes clarity, modularity, and speed.
+
+Features include:
+- Flexible Scene Management: Supports manual Just-in-Time and At-Start resource loading for controllability and performance.
+- Modern and Minimalist Design: Rust's type system ensures safe, fast, and concurrent gameplay mechanics.
+- Modern Utils: Networking, Physics, Pathfinding, UI, ECS and more.
+- Modular Architecture: Easily extendable using external crates.

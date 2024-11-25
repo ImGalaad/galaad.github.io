@@ -1,3 +1,5 @@
+@import "mixins";
+
 // Calm
 $text: #e0ebec;
 $bg: #191c1d;
@@ -5,14 +7,15 @@ $primary: #d1b8da;
 $secondary: #5d356a;
 $accent: #ba77a2;
 
-$codebg: #1d2225;
+$sidebarbg: #121414;
+$sidebarwidth: 360px;
+$sidebarpad: 2rem;
+$sidebarheightmm: 12rem;
 
 $mainwidth: min(960px, 90vw);
 $mainleftmarg: 5rem;
 
-$sidebarbg: #121414;
-$sidebarwidth: 360px;
-$sidebarpad: 2rem;
+$codebg: #1d2225;
 
 // Base
 body {
@@ -22,6 +25,14 @@ body {
   font-size: 18px;
   font-family: sans-serif;
   min-height: 100vh;
+
+  @include mm {
+    font-size: 16px;
+  }
+
+  @include sm {
+    font-size: 14px;
+  }
 }
 
 a {
@@ -29,19 +40,35 @@ a {
   cursor: pointer;
   text-decoration: none;
 
-  background-image: linear-gradient(180deg, transparent 50%, $primary 50%) !important;
+  background-image: linear-gradient(
+    180deg,
+    transparent 50%,
+    $primary 50%
+  ) !important;
   background-size: auto 190%;
 
   &:hover {
-    background-image: linear-gradient(180deg, transparent 50%, $accent 50%) !important;
+    background-image: linear-gradient(
+      180deg,
+      transparent 50%,
+      $accent 50%
+    ) !important;
   }
 
   &[target="_blank"]::after {
-    content: " 🡥";
+    content: " 🡕";
   }
 }
 
 ul {
+  @include mm {
+    padding-left: 1.75rem;
+  }
+
+  @include sm {
+    padding-left: 1.25rem;
+  }
+
   li {
     line-height: 1.8;
   }
@@ -50,15 +77,35 @@ ul {
 // Specific elements
 #sidebar {
   height: 100vh;
+  width: $sidebarwidth;
   position: fixed;
   background: $sidebarbg;
-  width: $sidebarwidth;
 
   display: flex;
   flex-direction: column;
 
+  @include mm {
+    height: $sidebarheightmm;
+    width: 100vw;
+    
+    flex-direction: row;
+
+    z-index: 1;
+  }
+
   img {
     width: calc(#{$sidebarwidth} - #{$sidebarpad} * 2);
+
+    @include mm {
+      width: 128px;
+      height: 128px;
+      position: absolute;
+      left: $sidebarpad;
+    }
+
+    @include sm {
+      display: none;
+    }
   }
 
   /* #search {
@@ -74,6 +121,10 @@ ul {
     height: 100px;
 
     #about {
+      @include mm {
+        height: 70px;
+      }
+
       & > a {
         font-size: 3rem;
         line-height: 6rem;
@@ -83,40 +134,80 @@ ul {
         background-image: none !important;
         font-family: serif;
         font-weight: bold;
+
+        @include mm {
+          font-size: 1.75rem;
+        }
       }
     }
 
-    & > a {
-      background-image: none !important;
-      /* &:hover {
-        text-decoration: underline;
-      } */
+    & > #links {
+      @include mm {
+        width: 55vw;
+        margin: 0 auto;
+      }
+      
+      @include sm {
+        width: 80vw;
+      }
+
+      & > a {
+        background-image: none !important;
+      }
     }
   }
 
   footer {
     text-align: center;
     padding: $sidebarpad;
-  
-    &>* {
+
+    @include mm {
+      display: none;
+    }
+
+    & > * {
       margin: 0 0.75rem;
     }
   }
 }
 
 .underlined {
-  background-image: linear-gradient(180deg, transparent 50%, $primary 50%) !important;
+  background-image: linear-gradient(
+    180deg,
+    transparent 50%,
+    $primary 50%
+  ) !important;
   background-size: auto 190%;
 
   &:hover {
-    background-image: linear-gradient(180deg, transparent 50%, $accent 50%) !important;
+    background-image: linear-gradient(
+      180deg,
+      transparent 50%,
+      $accent 50%
+    ) !important;
   }
 }
 
 main {
-  width: min(calc(#{$mainwidth} - #{$mainleftmarg}), calc(100vw - #{$mainleftmarg} - 20px - #{$sidebarwidth}));
   padding: 4rem 0;
   margin-left: calc(#{$sidebarwidth} + #{$mainleftmarg});
+  width: min(
+    calc(#{$mainwidth} - #{$mainleftmarg}),
+    calc(100vw - #{$mainleftmarg} - 20px - #{$sidebarwidth})
+  );
+
+  @include mm {
+    padding: calc(1rem + #{$sidebarheightmm}) 0 1rem 0;
+    $mainleftmarg: 2rem;
+    margin-left: $mainleftmarg;
+    width: calc(100vw - #{$mainleftmarg} - 20px);
+  }
+
+  @include sm {
+    $mainleftmarg: 1rem;
+    margin-left: $mainleftmarg;
+    width: calc(100vw - #{$mainleftmarg} - 20px);
+  }
 
   h1 {
     font-style: italic;
@@ -132,6 +223,15 @@ main {
 
 pre {
   font-size: 16px;
+
+  @include mm {
+    font-size: 14px;
+  }
+
+  @include sm {
+    font-size: 12px;
+  }
+
   background: $codebg;
   color: #eaeaea;
   width: fit-content;
@@ -157,11 +257,11 @@ pre {
 
   html.is-animating & {
     opacity: 0;
-    // transform: translateX(-1em);
+    transform: translateX(-1em);
   }
 
   html.is-leaving & {
-    // transform: translateX(1em);
+    transform: translateX(1em);
   }
 }
 
