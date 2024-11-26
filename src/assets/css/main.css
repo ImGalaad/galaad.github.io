@@ -28,7 +28,7 @@ a:hover {
   background-image: linear-gradient(180deg, transparent 50%, #ba77a2 50%) !important;
 }
 a[target=_blank] {
-  padding-right: 0.5ch;
+  padding-right: 0.75ch;
 }
 a[target=_blank]::after {
   content: url("/assets/images/arrow.svg");

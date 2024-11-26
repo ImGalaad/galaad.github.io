@@ -56,7 +56,7 @@ a {
   }
 
   &[target="_blank"] {
-    padding-right: 0.5ch;
+    padding-right: 0.75ch;
 
     &::after {
       content: url("/assets/images/arrow.svg");
