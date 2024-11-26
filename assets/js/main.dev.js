@@ -16,8 +16,8 @@ swup.on('pageView', function () {
   function typingTitle() {
     document.title = title.slice(0, i);
     i++;
-    if (url == document.URL && i != title.length + 1) setTimeout(typingTitle, 100);
+    if (url == document.URL && i != title.length + 1) setTimeout(typingTitle, 50);
   }
 
-  typingTitle();
+  setTimeout(typingTitle, 50);
 });

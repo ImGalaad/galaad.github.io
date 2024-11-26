@@ -55,8 +55,16 @@ a {
     ) !important;
   }
 
-  &[target="_blank"]::after {
-    content: " 🡕";
+  &[target="_blank"] {
+    padding-right: 0.5ch;
+
+    &::after {
+      content: url("/assets/images/arrow.svg");
+      display: inline-block;
+      width: 1ch;
+      height: 1ch;
+      background: transparent;
+    }
   }
 }
 
@@ -257,11 +265,11 @@ pre {
 
   html.is-animating & {
     opacity: 0;
-    transform: translateX(-1em);
+    transform: translateX(-0.25em);
   }
 
   html.is-leaving & {
-    transform: translateX(1em);
+    transform: translateX(0.25em);
   }
 }
 

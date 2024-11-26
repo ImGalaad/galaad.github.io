@@ -14,8 +14,8 @@ swup.on('pageView', () => {
         i++;
 
         if (url == document.URL && i != title.length + 1)
-            setTimeout(typingTitle, 100);
+            setTimeout(typingTitle, 50);
     }
 
-    typingTitle();
+    setTimeout(typingTitle, 50);
 });
