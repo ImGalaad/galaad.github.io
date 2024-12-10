@@ -126,7 +126,7 @@ ul li {
     width: 80vw;
   }
 }
-#sidebar nav > #links > a {
+#sidebar nav > #links > a:not(:hover) {
   background-image: none !important;
 }
 #sidebar footer {
@@ -177,6 +177,33 @@ main h1 {
   width: fit-content;
   font-family: serif;
   font-weight: bold;
+  margin-bottom: 2.5rem;
+}
+main a:has(.nextlink, .prevlink) {
+  background-image: none !important;
+}
+main .nextlink, main .prevlink {
+  background: transparent;
+  color: #e0ebec;
+  font-size: 18px;
+  font-family: sans-serif;
+  border: white 2px solid;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  width: 300px;
+}
+main .nextlink::before, main .prevlink::before {
+  white-space: pre;
+  color: #d1b8da;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+main .nextlink::before {
+  content: "Next \a";
+}
+main .prevlink::before {
+  content: "Previous \a";
 }
 
 pre {

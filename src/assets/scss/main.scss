@@ -160,7 +160,10 @@ ul {
       }
 
       & > a {
-        background-image: none !important;
+        &:not(:hover) {
+          background-image: none !important;
+        }
+        // background-image: none !important;
       }
     }
   }
@@ -226,6 +229,43 @@ main {
     width: fit-content;
     font-family: serif;
     font-weight: bold;
+    margin-bottom: 2.5rem;
+  }
+
+  a:has(.nextlink, .prevlink) {
+    background-image: none !important;
+  }
+
+  .nextlink, .prevlink {
+    background: transparent;
+
+    color: $text;
+    font-size: 18px;
+    font-family: sans-serif;
+
+    border: white 2px solid;
+    border-radius: 10px;
+
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+
+    width: 300px;
+
+    &::before {
+      white-space: pre;
+
+      color: $primary;
+      font-size: 18px;
+      font-family: sans-serif;
+    }
+  }
+
+  .nextlink::before {
+    content: "Next \a";
+  }
+
+  .prevlink::before {
+    content: "Previous \a";
   }
 }
 

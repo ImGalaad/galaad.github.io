@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="darkreader-lock" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Violette • Foundations of C</title>
+    <link rel="shortcut icon" href="/assets/images/pecklo.webp" type="image/x-icon" />
+
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <script type="module" src="/assets/js/main.js" defer></script>
+</head>
+<body>
+    <div id="sidebar">
+    <nav>
+        <section id="about">
+            <img width="296" height="296" src="/assets/images/peklo-transparent.png" alt="">
+            <a id="" href="/">Violette</a>
+        </section>
+
+        <section id="links">
+            
+                <a href="/awesome/">Awesome</a> •
+            
+                <a href="/blogs/">Blogs</a> •
+            
+                <a href="/">Home</a> •
+            
+                <a href="/projects/">Projects</a> •
+            
+
+            <a target="_blank" href="https://github.com/imsumire/">Github</a>
+            •
+            <a target="_blank" href="https://www.pinterest.fr/Violettttte/">Pinterest</a>
+            
+        </section>
+    </nav>
+    <footer>
+    <p>Made with ❤ by <a target="_blank" href="https://github.com/ImSumire">@imsumire</a></p>
+    <p>Using
+        <a target="_blank" href="https://www.11ty.dev/">11ty</a>,
+        <a target="_blank" href="https://swup.js.org/">Swup</a>,
+        <a target="_blank" href="https://sass-lang.com/">Sass</a> and
+        <a target="_blank" href="https://www.typescriptlang.org/">TypeScript</a>
+    </p>
+</footer>
+</div>
+    <main class="transition-main">
+        <h1>Foundations of C</h1>
+        <h2>Work In Progress</h2>
+<hr>
+<p><strong>C for Python &amp; Ocaml devs</strong></p>
+<p>Inspiration: <a href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Nim for Python Programmers</a></p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>🐍 Python</th>
+<th>🐫 OCaml</th>
+<th>⚙️ C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Execution model</strong></td>
+<td>Interpreted (bytecode runs on a <a href="/blog/lexicon/vm">virtual machine</a>)</td>
+<td>Compiled (to native code or bytecode for the OCaml runtime)</td>
+<td>Compiled (translates to machine code)</td>
+</tr>
+<tr>
+<td><strong>Memory management</strong></td>
+<td>Automatic (<a href="/blog/lexicon/gc">garbage collection</a>)</td>
+<td>Automatic (<a href="/blog/lexicon/gc">garbage collection</a>)</td>
+<td>Manual (explicit allocation and deallocation)</td>
+</tr>
+<tr>
+<td><strong>Typing</strong></td>
+<td>Dynamic (type checked at runtime)</td>
+<td>Static (strongly typed, with type inference)</td>
+<td>Static (type checked at compile time)</td>
+</tr>
+<tr>
+<td><strong>Syntax</strong></td>
+<td>High-level, simple, and expressive</td>
+<td>High-level, concise, functional, and expressive</td>
+<td>Low-level, verbose, with manual structuring</td>
+</tr>
+<tr>
+<td><strong>Standard library</strong></td>
+<td>Extensive and built-in</td>
+<td>Moderate, functional and imperative utilities included</td>
+<td>Minimal, relies on third-party libraries</td>
+</tr>
+<tr>
+<td><strong>Pointers</strong></td>
+<td>Not directly exposed</td>
+<td>Not directly exposed, abstracted by values and references</td>
+<td>Core concept for memory and addressing</td>
+</tr>
+<tr>
+<td><strong>Error handling</strong></td>
+<td>Exceptions</td>
+<td>Exceptions and pattern matching (expressive error handling)</td>
+<td>Return codes and error flags</td>
+</tr>
+<tr>
+<td><strong>Use case</strong></td>
+<td>Rapid development, scripting, web development</td>
+<td>Functional programming, compiler design, theorem proving, static analysis</td>
+<td>Systems programming, embedded systems, performance-critical applications</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3>Set Up Environment</h3>
+<ul>
+<li>Installation for Linux, MacOS &amp; Windows</li>
+<li>Choosing an IDE (the examples will be on vscode)</li>
+<li>Terminal-based compilation using <code>gcc main.c -o main</code></li>
+</ul>
+<h3>Basic Syntax and Structure</h3>
+<ul>
+<li><code>main()</code> function &amp; <code>include</code> macros</li>
+<li>Basic I/O usage with <code>printf</code> (first Hello, World!)</li>
+<li>Basic types (<code>int</code>, <code>float</code>, <code>char</code>)</li>
+<li>Variables &amp; constants</li>
+</ul>
+<h3>Control Structures</h3>
+<ul>
+<li>If/else branches</li>
+<li>For/while loops</li>
+<li>(For Ocaml fanatics) Switch statement</li>
+</ul>
+<h3>Functions</h3>
+<ul>
+<li>Define &amp; call functions</li>
+<li>Pass arguments by value &amp; reference</li>
+<li>Return values</li>
+</ul>
+
+    </main>
+</body>
+</html>
