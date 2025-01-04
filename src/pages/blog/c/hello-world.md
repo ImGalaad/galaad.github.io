@@ -1,12 +1,23 @@
 ---
 title: 2.2 Hello, World!
 layout: base.liquid
+
+prev: /blog/c/installation
+next: /blog/c/syntax
 ---
 
 Maintenant que vous avez installé GCC et un environnement de développement intégré (IDE), créons un simple programme "Hello, World !" ("Bonjour, monde!" en anglais) en C.
 
 **Qu'est-ce que le programme "Hello, World !"?** <br>
 Le programme "Hello, World !" est un programme traditionnel qui est souvent utilisé pour introduire les débutants à un nouveau langage de programmation et vérifier si l'environnement est correctement configuré. Il s'agit d'un programme simple qui affiche "Hello, World !" à l'écran.
+
+Voici un exmple en Python:
+```py
+print("Hello, World!")
+```
+
+Ou encore en Ocaml:
+<pre class="language-ocaml"><code class="language-py"><span class="token keyword">print_string</span> <span class="token string">"Hello, World!\n"</span></code></pre>
 
 Créez le fichier `main.c` dans un nouveau répertoire (où vous apprendrez C) :
 
@@ -18,19 +29,66 @@ int main() {
     return 0;
 }
 ```
+<br>
+
+<section class="accordion">
+    <input type="checkbox" checked>
+    <h4>Explication<i></i></h4>
+<article>
+
+```c
+#include <stdio.h>
+```
+Cette ligne charge le contenu de la bibliothèque stdio, c'est une librairie qui contient une variété de fonctions pour gérer les entrées (clavier par exemple) et sorties (par exemple `printf` pour afficher dans la console).
+<br>
+<br>
+
+```c
+int main() { ... }
+```
+Cette ligne déclare la fonction principale, c'est ici que le programme commence.  <br>
+Le mot `int` définit que notre fonction `main` retournera un entier. <br>
+Les symboles `{` et `}` sont utilisés pour définir le début et la fin d'un groupe d'expressions.
+<br>
+<br>
+
+```c
+printf("Hello, World!\n");
+```
+Cette ligne appelle la fonction `printf` - affiche dans la console le texte saisi comme paramètre - avec une chaîne de caractères comme paramètre. <br>
+<br>
+
+`\n` représente <!-- le christ --> un saut de ligne, on peut utiliser `printf` sans saut de ligne final.<br>
+Utilisez le symbole `\` pour afficher des caractères spéciaux (appelés [caractères d'échappement](https://fr.wikipedia.org/wiki/Caract%C3%A8re_d%27%C3%A9chappement)). <br><br>
+Notez que à la fin de la ligne, nous utilisons un `;`, ce qui signifie que nous avons terminé pour cette expression, car C nous permet de sauter des lignes entre chaque mots pour rendre le code moins compact.
+<br>
+<br>
+
+```c
+return 0;
+```
+Ici, nous utilisons `return`, qui nous permet d'arrêter la fonction et de retourner la valeur spécifiée, dans ce cas `0` *(pour dire à l'ordinateur que tout s'est bien passé, nous n'allons pas nous y attarder)*.
+</article>
+</section>
+
+*Il n'est pas obligatoire de comprendre ce code tout de suite.*
 
 <br>
 
-### Compilez-le:
+### Compilation:
+Irure minim voluptate in officia. Id aliquip duis cupidatat do non dolore reprehenderit est occaecat laboris cillum irure tempor ea. Sit nostrud cillum ad proident nostrud ea pariatur fugiat eiusmod velit dolore mollit culpa. Est ipsum pariatur velit culpa elit sit ipsum voluptate elit sit do.
+
+Pour compiler notre "Hello, World!" sur Linux, il nous faut ouvrir le terminal et entrer:
+
 ```sh
 gcc -o main main.c  # dans la console
 ```
-Cette commande indique à GCC de convertir notre code en code machine (afin que l'ordinateur puisse l'exécuter). Ici, un fichier nommé `main` sera créé dans le répertoire courant. <br>
+Cette commande indique à GCC de convertir notre code en code machine afin que l'ordinateur puisse l'exécuter. Ici, un fichier nommé `main` sera créé dans le répertoire courant. <br>
 *Le mot `-o` signifie que nous voulons indiquer le nom du fichier à créer (dans ce cas `main`)*.
 
 <br>
 
-### Exécutez-le:
+Pour le moment rien ne s'affiche, c'est normal, il faut l'exécuter. Toujours dans le terminal, entrer:
 ```sh
 ./main  # dans la console
 ```
@@ -38,33 +96,6 @@ Ici, nous demandons à l'ordinateur de démarrer le programme compilé. Vous dev
 ```
 Hello, World!
 ```
-
-<br>
-
-### Explication:
-```c
-#include <stdio.h>
-```
-Cette ligne charge le contenu de la bibliothèque stdio pour obtenir la fonction `printf`.
-
-```c
-int main() { ... }
-```
-Cette ligne déclare la fonction principale, c'est ici que le programme commence.  <br>
-Le mot `int` définit que notre fonction `main` retournera un entier. <br>
-Les symboles `{` et `}` sont utilisés pour définir le début et la fin d'un groupe d'expressions.  <br>
-
-```c
-printf("Hello, World!\n");
-```
-Cette ligne appelle la fonction `printf` - affiche dans la console le texte saisi comme paramètre - avec une chaîne de caractères comme paramètre, se terminant par `\n` pour créer une nouvelle ligne à la fin de l'affichage.  <br>
-Utilisez le symbole `\` pour afficher des caractères spéciaux (appelés [caractères d'échappement](https://fr.wikipedia.org/wiki/Caract%C3%A8re_d%27%C3%A9chappement)). <br><br>
-Notez que à la fin de la ligne, nous utilisons un `;`, ce qui signifie que nous avons terminé pour cette expression, car C nous permet de sauter des lignes à tout moment pour rendre le code moins compact.
-
-```c
-return 0;
-```
-Ici, nous utilisons `return`, qui nous permet d'arrêter la fonction et de retourner la valeur spécifiée, dans ce cas `0` *(pour dire à l'ordinateur que tout s'est bien passé, nous n'allons pas nous y attarder)*.
 
 
 <section class="accordion">
@@ -136,6 +167,3 @@ return 0;
 Here we use `return`, which allows us to stop the function & return the specified value, in this case `0` *(to tell the computer that all has gone well, we won't be looking into it)*.
 </article>
 </section>
-
-<a href="/blog/c/installation/"><button class="prevlink">2.1 Getting Started</button></a>
-<a href="/blog/c/syntax/"><button class="nextlink">3. Syntax</button></a>

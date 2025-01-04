@@ -1,3 +1,12 @@
+{% for page in collections.pages %}
+    {% if page.data.page.filePathStem == prev %}
+        {% assign prev = page %}
+    {% endif %}
+    {% if page.data.page.filePathStem == next %}
+        {% assign next = page %}
+    {% endif %}
+{% endfor %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +24,24 @@
     {% include "nav.liquid" %}
     <main class="transition-main">
         <h1>{{ title }}</h1>
+
+        {% comment %} {% if prev %}
+            <a href="{{ prev.data.page.filePathStem }}"><button class="prevlink">{{ prev.data.title }}</button></a>
+        {% endif %}
+
+        {% if next %}
+            <a href="{{ next.data.page.filePathStem }}"><button class="nextlink">{{ next.data.title }}</button></a>
+        {% endif %} {% endcomment %}
+
         {{ content }}
+
+        {% if prev %}
+            <a href="{{ prev.data.page.filePathStem }}"><button class="prevlink">{{ prev.data.title }}</button></a>
+        {% endif %}
+
+        {% if next %}
+            <a href="{{ next.data.page.filePathStem }}"><button class="nextlink">{{ next.data.title }}</button></a>
+        {% endif %}
     </main>
 </body>
 </html>

@@ -2,14 +2,14 @@
 @import "prism";
 
 // Calm
-$text: #e0ebec;
-$dim: #b2bcbd;
-$bg: #191c1d;
-$primary: #d1b8da;
-$secondary: #5d356a;
-$accent: #ba77a2;
+$text: #e9e1f2;
+$dim: #bdb2ca;
+$bg: #0f0e10;
+$primary: #bda1d5;
+$secondary: #79366e;
+$accent: #b35393;
 
-$sidebarbg: #121414;
+$sidebarbg: #141217;
 $sidebarwidth: 360px;
 $sidebarpad: 2rem;
 $sidebarheightmm: 12rem;
@@ -247,11 +247,12 @@ main {
     font-size: 18px;
     font-family: sans-serif;
 
-    border: white 2px solid;
+    border: $secondary 2px solid;
     border-radius: 10px;
 
     padding: 0.5rem;
     margin-right: 0.5rem;
+    margin-top: 1.5rem;
 
     width: 300px;
 

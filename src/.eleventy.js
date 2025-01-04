@@ -3,14 +3,32 @@
 /* npm install @11ty/eleventy-plugin-syntaxhighlight */
 /* https://www.11ty.dev/docs/plugins/syntaxhighlight/ */
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const htmlmin = require("html-minifier");
 
 module.exports = function (config) {
   config.addPlugin(syntaxHighlight);
+
+  config.addTransform("htmlmin", function(content, outputPath) {
+    if (outputPath && outputPath.endsWith(".html")) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+      });
+      return minified;
+    }
+    return content;
+  });
 
   // Ignore compilation
   config.addPassthroughCopy("assets");
 
   // Add collections
+  config.addCollection("pages", function (collections) {
+    const pages = collections.getFilteredByGlob("pages/**/*.{md,html}");
+    return pages;
+  });
+
   config.addCollection("blogs", function (collections) {
     const posts = collections.getFilteredByGlob("pages/blog/**/*.{md,html}");
     const groups = [];

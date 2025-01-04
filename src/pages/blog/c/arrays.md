@@ -1,6 +1,9 @@
 ---
 title: 6. Arrays
 layout: base.liquid
+
+prev: /blog/c/io
+next: /blog/c/pointers
 ---
 
 ## 1. Definition
@@ -12,6 +15,3 @@ layout: base.liquid
 ## 4. Iteration
 
 ## 5. Multi-dimensional iteration
-
-<a href="/blog/c/io/"><button class="prevlink">5. I/O</button></a>
-<a href="/blog/c/pointers/"><button class="nextlink">7. Pointers</button></a>

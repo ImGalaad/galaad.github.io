@@ -4,6 +4,7 @@ const swup = new Swup({
 });
 
 swup.on('pageView', () => {
+    // Typing animation
     const url = document.URL;
     const title = document.title;
     document.title = title[0];
@@ -18,4 +19,8 @@ swup.on('pageView', () => {
     }
 
     setTimeout(typingTitle, 50);
+
+    // Scroll to top
+    console.log("hi");
+    window.scrollTo({ top: 1, behavior: 'smooth' });
 });

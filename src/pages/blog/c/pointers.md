@@ -1,6 +1,9 @@
 ---
 title: 7. Pointers
 layout: base.liquid
+
+prev: /blog/c/arrays
+next: /blog/c/memory
 ---
 
 ## 1. Definition
@@ -16,6 +19,3 @@ layout: base.liquid
 ## 6. stdlib.h
 
 ## 7. string.h
-
-<a href="/blog/c/arrays/"><button class="prevlink">6. Arrays</button></a>
-<a href="/blog/c/memory/"><button class="nextlink">8. Memory Management</button></a>

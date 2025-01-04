@@ -1,6 +1,9 @@
 ---
 title: 2.1 Getting Started
 layout: base.liquid
+
+prev: /blog/c/introduction
+next: /blog/c/hello-world
 ---
 
 ##### Installation
@@ -40,7 +43,3 @@ layout: base.liquid
 [Raysan5's advice](https://github.com/raysan5/raylib/wiki/Working-on-Windows#mingw-w64gcc)
 </article>
 </section>
-
-
-<a href="/blog/c/introduction/"><button class="prevlink">1. Introduction to C</button></a>
-<a href="/blog/c/hello-world/"><button class="nextlink">2.2 Hello, World!</button></a>

@@ -1,6 +1,8 @@
 ---
 title: 1. Introduction to C
 layout: base.liquid
+
+next: /blog/c/installation
 ---
 
 <!--
@@ -67,8 +69,6 @@ Inspiration: [Nim for Python Programmers](https://github.com/nim-lang/Nim/wiki/N
 
 Source: [Wikipedia](https://en.wikipedia.org/wiki/C_(programming_language))
 
-<a href="/blog/c/installation/"><button class="nextlink">2.1 Getting Started</button></a>
-
 <!--
 ## Roadmap
 
@@ -83,6 +83,7 @@ Source: [Wikipedia](https://en.wikipedia.org/wiki/C_(programming_language))
 
 3. Syntax
     - Main
+    - Comments
     - Variables
         - Each instruction have a ; at the end
     - Data Types (different writing styles)
@@ -99,7 +100,6 @@ Source: [Wikipedia](https://en.wikipedia.org/wiki/C_(programming_language))
         - Parameters
         - a word about recursivity
         - (return and params are copies!!)
-    - Comments
     - Control flow
         - if
         - while

@@ -131,8 +131,8 @@ pre {
 
 body {
   margin: 0;
-  color: #e0ebec;
-  background: #191c1d;
+  color: #e9e1f2;
+  background: #0f0e10;
   font-size: 18px;
   font-family: sans-serif;
   min-height: 100vh;
@@ -149,14 +149,14 @@ body {
 }
 
 a {
-  color: #e0ebec;
+  color: #e9e1f2;
   cursor: pointer;
   text-decoration: none;
-  background-image: linear-gradient(180deg, transparent 50%, #d1b8da 50%) !important;
+  background-image: linear-gradient(180deg, transparent 50%, #bda1d5 50%) !important;
   background-size: auto 190%;
 }
 a:hover {
-  background-image: linear-gradient(180deg, transparent 50%, #ba77a2 50%) !important;
+  background-image: linear-gradient(180deg, transparent 50%, #b35393 50%) !important;
 }
 a[target=_blank] {
   padding-right: 0.75ch;
@@ -170,7 +170,7 @@ a[target=_blank]::after {
 }
 
 em {
-  color: #b2bcbd;
+  color: #bdb2ca;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -191,7 +191,7 @@ ul li {
   height: 100vh;
   width: 360px;
   position: fixed;
-  background: #121414;
+  background: #141217;
   display: flex;
   flex-direction: column;
   /* #search {
@@ -239,7 +239,7 @@ ul li {
   font-size: 3rem;
   line-height: 6rem;
   text-decoration: underline;
-  text-decoration-color: #5d356a;
+  text-decoration-color: #79366e;
   text-underline-offset: 6px;
   background-image: none !important;
   font-family: serif;
@@ -278,11 +278,11 @@ ul li {
 }
 
 .underlined {
-  background-image: linear-gradient(180deg, transparent 50%, #d1b8da 50%) !important;
+  background-image: linear-gradient(180deg, transparent 50%, #bda1d5 50%) !important;
   background-size: auto 190%;
 }
 .underlined:hover {
-  background-image: linear-gradient(180deg, transparent 50%, #ba77a2 50%) !important;
+  background-image: linear-gradient(180deg, transparent 50%, #b35393 50%) !important;
 }
 
 main {
@@ -308,7 +308,7 @@ main h1 {
   text-underline-offset: 6px;
   rotate: -2deg;
   text-decoration: underline;
-  text-decoration-color: #ba77a2;
+  text-decoration-color: #b35393;
   width: fit-content;
   font-family: serif;
   font-weight: bold;
@@ -319,18 +319,19 @@ main a:has(.nextlink, .prevlink) {
 }
 main .nextlink, main .prevlink {
   background: transparent;
-  color: #e0ebec;
+  color: #e9e1f2;
   font-size: 18px;
   font-family: sans-serif;
-  border: white 2px solid;
+  border: #79366e 2px solid;
   border-radius: 10px;
   padding: 0.5rem;
   margin-right: 0.5rem;
+  margin-top: 1.5rem;
   width: 300px;
 }
 main .nextlink::before, main .prevlink::before {
   white-space: pre;
-  color: #d1b8da;
+  color: #bda1d5;
   font-size: 18px;
   font-family: sans-serif;
 }
@@ -397,7 +398,7 @@ html.is-leaving .transition-main {
   padding: 1rem;
   margin: 1.5rem 0;
   border-radius: 5px;
-  border: 1px solid #5d356a;
+  border: 1px solid #79366e;
 }
 .accordion i {
   position: absolute;
@@ -407,7 +408,7 @@ html.is-leaving .transition-main {
 .accordion i::before, .accordion i::after {
   content: "";
   position: absolute;
-  background: #e0ebec;
+  background: #e9e1f2;
   width: 3px;
   height: 9px;
   transition: all 0.25s ease-in-out;

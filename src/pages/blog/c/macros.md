@@ -1,6 +1,9 @@
 ---
 title: 4. Macros
 layout: base.liquid
+
+prev: /blog/c/control-flow
+next: /blog/c/io
 ---
 
 ## 1. Principe
@@ -9,6 +12,3 @@ layout: base.liquid
 ## 2. #define
 
 ## 3. #include
-
-<a href="/blog/c/syntax/"><button class="prevlink">3. Syntax</button></a>
-<a href="/blog/c/io/"><button class="nextlink">5. I/O</button></a>
