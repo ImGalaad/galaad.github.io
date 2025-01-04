@@ -1,3 +1,134 @@
+/* Catppuccin Colors (Mocha)
+https://catppuccin.com/palette */
+/* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism-tomorrow&languages=clike+c */
+code,
+pre {
+  color: #eaeaea;
+  background: 0 0;
+  border-radius: 6px;
+  width: fit-content;
+  font-family: monospace;
+  font-size: 16px;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+@media only screen and (max-width: 1000px) {
+  code,
+pre {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  code,
+pre {
+    font-size: 12px;
+  }
+}
+
+pre {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+
+:not(pre) > code,
+pre {
+  background: #23292c;
+}
+
+:not(pre) > code {
+  padding: 0.2em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.token.block-comment,
+.token.cdata,
+.token.comment,
+.token.doctype,
+.token.prolog {
+  color: #7f849c;
+}
+
+.token.punctuation {
+  color: #a6adc8;
+}
+
+.token.attr-name,
+.token.deleted,
+.token.namespace,
+.token.tag {
+  color: #f38ba8;
+}
+
+.token.function,
+.token.function-name {
+  color: #89b4fa;
+}
+
+.token.boolean,
+.token.number {
+  color: #fab387;
+}
+
+.token.class-name,
+.token.constant,
+.token.property,
+.token.symbol {
+  color: #f9e2af;
+}
+
+.token.atrule,
+.token.builtin,
+.token.important,
+.token.keyword,
+.token.selector {
+  color: #cba6f7;
+}
+
+.token.attr-value,
+.token.char,
+.token.regex,
+.token.string,
+.token.variable {
+  color: #a6e3a1;
+}
+
+.token.entity,
+.token.operator,
+.token.url {
+  color: #74c7ec;
+}
+
+.token.bold,
+.token.important {
+  font-weight: 700;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.inserted {
+  color: #8dc288;
+}
+
 body {
   margin: 0;
   color: #e0ebec;
@@ -36,6 +167,10 @@ a[target=_blank]::after {
   width: 1ch;
   height: 1ch;
   background: transparent;
+}
+
+em {
+  color: #b2bcbd;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -206,31 +341,6 @@ main .prevlink::before {
   content: "Previous \a";
 }
 
-pre {
-  font-size: 16px;
-  background: #1d2225;
-  color: #eaeaea;
-  width: fit-content;
-  padding: 0.5rem;
-  border-radius: 6px;
-}
-@media only screen and (max-width: 1000px) {
-  pre {
-    font-size: 14px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  pre {
-    font-size: 12px;
-  }
-}
-pre #prompt {
-  color: #cba6f7;
-}
-pre .operator {
-  color: #fab387;
-}
-
 .transition-main {
   transition-duration: 0.12s;
   transition-property: opacity, transform;
@@ -258,4 +368,87 @@ html.is-leaving .transition-main {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(150, 150, 150, 0.6);
+}
+
+@keyframes flipdown {
+  0% {
+    opacity: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+  }
+  5% {
+    opacity: 1;
+  }
+  80% {
+    transform: rotateX(8deg);
+  }
+  83% {
+    transform: rotateX(6deg);
+  }
+  92% {
+    transform: rotateX(-3deg);
+  }
+  100% {
+    transform-origin: top center;
+    transform: rotateX(0deg);
+  }
+}
+.accordion {
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 5px;
+  border: 1px solid #5d356a;
+}
+.accordion i {
+  position: absolute;
+  margin-left: 1ch;
+  transform: translate(0, 8px);
+}
+.accordion i::before, .accordion i::after {
+  content: "";
+  position: absolute;
+  background: #e0ebec;
+  width: 3px;
+  height: 9px;
+  transition: all 0.25s ease-in-out;
+}
+.accordion i::before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+.accordion i::after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+.accordion h4 {
+  margin: 0;
+}
+.accordion article {
+  transition: all 0.5s ease-in;
+  transition: opacity 0.1s ease-in;
+}
+.accordion article :first-child {
+  transition: margin-top 0.1s ease-in;
+}
+.accordion input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: min(calc(min(960px, 90vw) - 5rem), calc(100vw - 5rem - 20px - 360px));
+  height: 20px;
+  z-index: 1;
+  opacity: 0;
+}
+.accordion input[type=checkbox]:checked ~ article {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  display: none;
+  transform: translate(0, 50%);
+}
+.accordion input[type=checkbox]:checked ~ article :first-child {
+  margin-top: 0;
+}
+.accordion input[type=checkbox]:checked ~ h4 i::before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+.accordion input[type=checkbox]:checked ~ h4 i::after {
+  transform: translate(-2px, 0) rotate(-45deg);
 }

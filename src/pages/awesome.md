@@ -13,7 +13,11 @@ This is my handpicked collection of resources, tools, useless things, and inspir
 
 ## Game Developement
 - <a target="_blank" href="https://www.raylib.com/">Raylib</a> <span>Extremely good game engine</span>
-- <a target="_blank" href="https://github.com/Nazariglez/notan">Notan</a></span>
+- <a target="_blank" href="https://github.com/Nazariglez/notan">Notan</a>
+- <a target="_blank" href="https://github.com/floooh/sokol">Sokol</a>
+- <a target="_blank" href="https://github.com/HailToDodongo/tiny3d">Tiny3D</a> <span>for N64</span>
+- <a target="_blank" href="https://github.com/libsdl-org/SDL">SDL</a>
+- <a target="_blank" href="https://github.com/ColleagueRiley/RGFW">RGFW</a>
 
 ## Optimization
 - <a target="_blank" href="https://www.bigocheatsheet.com/">BigOCheat</a>
@@ -30,7 +34,17 @@ This is my handpicked collection of resources, tools, useless things, and inspir
 
 ## Good Youtubers
 - <a target="_blank" href="https://www.youtube.com/@TsodingDaily">Tsoding</a> <span>Funny and covering a lot of topics</span>
-
+- <a target="_blank" href="https://www.youtube.com/@Acerola_t">Acerola</a>
+- <a target="_blank" href="https://www.youtube.com/@samyam">samyam</a>
+- <a target="_blank" href="https://www.youtube.com/@Fireship">Fireship</a>
+- <a target="_blank" href="https://www.youtube.com/@acegikmo">Freya Holmér</a>
+- <a target="_blank" href="https://www.youtube.com/@lauriewired">LaurieWired</a>
+- <a target="_blank" href="https://www.youtube.com/@RGMechEx">Retro Game Mechanics Explained</a>
+- <a target="_blank" href="https://www.youtube.com/@SebastianLague">Sebastian Lague</a>
+- <a target="_blank" href="https://www.youtube.com/@KazeN64">Kaze Emanuar</a>
+- <a target="_blank" href="https://www.youtube.com/@Ionic1k">Ionic1k</a>
+- <a target="_blank" href="https://www.youtube.com/@HortyUnderscore">HortyUnderscore</a>
 ## Repositories
 - <a target="_blank" href="https://github.com/TodePond/DreamBerd">DreamBerd</a> <span>Sus</span>
 - <a target="_blank" href="https://github.com/kitgore/BongoCat">BongoCat</a> <span>Most useful vsc extension</span>
+- <a target="_blank" href="https://github.com/nicbarker/clay">Clay</a>

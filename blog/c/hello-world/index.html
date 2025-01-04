@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="darkreader-lock" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Violette • 2.2 Hello, World!</title>
+    <link rel="shortcut icon" href="/assets/images/pecklo.webp" type="image/x-icon" />
+
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <script type="module" src="/assets/js/main.js" defer></script>
+</head>
+<body>
+    <div id="sidebar">
+    <nav>
+        <section id="about">
+            <img width="296" height="296" src="/assets/images/peklo-transparent.png" alt="">
+            <a id="" href="/">Violette</a>
+        </section>
+
+        <section id="links">
+            
+                <a href="/awesome/">Awesome</a> •
+            
+                <a href="/blogs/">Blogs</a> •
+            
+                <a href="/">Home</a> •
+            
+                <a href="/projects/">Projects</a> •
+            
+
+            <a target="_blank" href="https://github.com/imsumire/">Github</a>
+            •
+            <a target="_blank" href="https://www.pinterest.fr/Violettttte/">Pinterest</a>
+            
+        </section>
+    </nav>
+    <footer>
+    <p>Made with ❤ by <a target="_blank" href="https://github.com/ImSumire">@imsumire</a></p>
+    <p>Using
+        <a target="_blank" href="https://www.11ty.dev/">11ty</a>,
+        <a target="_blank" href="https://swup.js.org/">Swup</a>,
+        <a target="_blank" href="https://sass-lang.com/">Sass</a> and
+        <a target="_blank" href="https://www.typescriptlang.org/">TypeScript</a>
+    </p>
+</footer>
+</div>
+    <main class="transition-main">
+        <h1>2.2 Hello, World!</h1>
+        <p>Maintenant que vous avez installé GCC et un environnement de développement intégré (IDE), créons un simple programme &quot;Hello, World !&quot; (&quot;Bonjour, monde!&quot; en anglais) en C.</p>
+<p><strong>Qu'est-ce que le programme &quot;Hello, World !&quot;?</strong> <br>
+Le programme &quot;Hello, World !&quot; est un programme traditionnel qui est souvent utilisé pour introduire les débutants à un nouveau langage de programmation et vérifier si l'environnement est correctement configuré. Il s'agit d'un programme simple qui affiche &quot;Hello, World !&quot; à l'écran.</p>
+<p>Créez le fichier <code>main.c</code> dans un nouveau répertoire (où vous apprendrez C) :</p>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Hello, World!\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<br>
+<h3>Compilez-le:</h3>
+<pre class="language-sh"><code class="language-sh">gcc <span class="token parameter variable">-o</span> main main.c  <span class="token comment"># dans la console</span></code></pre>
+<p>Cette commande indique à GCC de convertir notre code en code machine (afin que l'ordinateur puisse l'exécuter). Ici, un fichier nommé <code>main</code> sera créé dans le répertoire courant. <br>
+<em>Le mot <code>-o</code> signifie que nous voulons indiquer le nom du fichier à créer (dans ce cas <code>main</code>)</em>.</p>
+<br>
+<h3>Exécutez-le:</h3>
+<pre class="language-sh"><code class="language-sh">./main  <span class="token comment"># dans la console</span></code></pre>
+<p>Ici, nous demandons à l'ordinateur de démarrer le programme compilé. Vous devriez obtenir ce résultat:</p>
+<pre><code>Hello, World!
+</code></pre>
+<br>
+<h3>Explication:</h3>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span></code></pre>
+<p>Cette ligne charge le contenu de la bibliothèque stdio pour obtenir la fonction <code>printf</code>.</p>
+<pre class="language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">}</span></code></pre>
+<p>Cette ligne déclare la fonction principale, c'est ici que le programme commence.  <br>
+Le mot <code>int</code> définit que notre fonction <code>main</code> retournera un entier. <br>
+Les symboles <code>{</code> et <code>}</code> sont utilisés pour définir le début et la fin d'un groupe d'expressions.  <br></p>
+<pre class="language-c"><code class="language-c"><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Hello, World!\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Cette ligne appelle la fonction <code>printf</code> - affiche dans la console le texte saisi comme paramètre - avec une chaîne de caractères comme paramètre, se terminant par <code>\n</code> pour créer une nouvelle ligne à la fin de l'affichage.  <br>
+Utilisez le symbole <code>\</code> pour afficher des caractères spéciaux (appelés <a href="https://fr.wikipedia.org/wiki/Caract%C3%A8re_d%27%C3%A9chappement">caractères d'échappement</a>). <br><br>
+Notez que à la fin de la ligne, nous utilisons un <code>;</code>, ce qui signifie que nous avons terminé pour cette expression, car C nous permet de sauter des lignes à tout moment pour rendre le code moins compact.</p>
+<pre class="language-c"><code class="language-c"><span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span></code></pre>
+<p>Ici, nous utilisons <code>return</code>, qui nous permet d'arrêter la fonction et de retourner la valeur spécifiée, dans ce cas <code>0</code> <em>(pour dire à l'ordinateur que tout s'est bien passé, nous n'allons pas nous y attarder)</em>.</p>
+<section class="accordion">
+    <input type="checkbox" checked>
+    <h4>English version 🇬🇧<i></i></h4>
+<article>
+<p>Now that you have installed GCC &amp; an IDE, let's create a simple &quot;Hello, World!&quot; program in C.</p>
+<p><strong>What is the &quot;Hello, World!&quot; program?</strong> <br>
+The &quot;Hello, World!&quot; program is a traditional program that is often used to introduce beginners to a new programming language &amp; check if the environment is well setup. It's a simple program that prints &quot;Hello, World!&quot; to the screen.</p>
+<p>Create the file <code>main.c</code> in a new directory (where you'll be learning C):</p>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Hello, World!\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<br>
+<h3>Compile it:</h3>
+<pre class="language-sh"><code class="language-sh">gcc <span class="token parameter variable">-o</span> main main.c  <span class="token comment"># in the console</span></code></pre>
+<p>This command tells GCC to convert our code into machine code (so that the computer can execute it). Here, a file named <code>main</code> will be created in the current directory. <br>
+<em>The word <code>-o</code> means that we want to indicate the name of the file to be created (in this case <code>main</code>)</em>.</p>
+<br>
+<h3>Run it:</h3>
+<pre class="language-sh"><code class="language-sh">./main  <span class="token comment"># in the console</span></code></pre>
+<p>Here we tell the computer to start the compiled program. You should get this result:</p>
+<pre><code>Hello, World!
+</code></pre>
+<br>
+<h3>Explanation:</h3>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span></code></pre>
+<p>This line loads the contents of the stdio library to get the <code>printf</code> function.</p>
+<pre class="language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">}</span></code></pre>
+<p>This line declares the main function, this is where the program starts. <br>
+The word <code>int</code> defines that our <code>main</code> function will return an integer. <br>
+The <code>{</code> &amp; <code>}</code> symbols are used to define the beginning &amp; end of a group of expressions.</p>
+<pre class="language-c"><code class="language-c"><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Hello, World!\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>This line calls the <code>printf</code> function - displays in the console the text entered as parameter - with a string as parameter, ending in <code>\n</code> to create a new line at the end of the display. <br>
+Use the <code>\</code> symbol to display special characters <em>(named <a href="https://en.wikipedia.org/wiki/.Escape_character">Escape characters</a>)</em>. <br><br>
+Note that at the end of the line we use a <code>;</code>, which means we're done for this expression, because C lets you jump lines anytime you want to make the code less compact.</p>
+<pre class="language-c"><code class="language-c"><span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span></code></pre>
+<p>Here we use <code>return</code>, which allows us to stop the function &amp; return the specified value, in this case <code>0</code> <em>(to tell the computer that all has gone well, we won't be looking into it)</em>.</p>
+</article>
+</section>
+<p><a href="/blog/c/installation/"><button class="prevlink">2.1 Getting Started</button></a>
+<a href="/blog/c/syntax/"><button class="nextlink">3. Syntax</button></a></p>
+
+    </main>
+</body>
+</html>

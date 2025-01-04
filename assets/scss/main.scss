@@ -1,7 +1,9 @@
 @import "mixins";
+@import "prism";
 
 // Calm
 $text: #e0ebec;
+$dim: #b2bcbd;
 $bg: #191c1d;
 $primary: #d1b8da;
 $secondary: #5d356a;
@@ -14,8 +16,6 @@ $sidebarheightmm: 12rem;
 
 $mainwidth: min(960px, 90vw);
 $mainleftmarg: 5rem;
-
-$codebg: #1d2225;
 
 // Base
 body {
@@ -66,6 +66,10 @@ a {
       background: transparent;
     }
   }
+}
+
+em {
+  color: $dim;
 }
 
 ul {
@@ -269,32 +273,6 @@ main {
   }
 }
 
-pre {
-  font-size: 16px;
-
-  @include mm {
-    font-size: 14px;
-  }
-
-  @include sm {
-    font-size: 12px;
-  }
-
-  background: $codebg;
-  color: #eaeaea;
-  width: fit-content;
-  padding: 0.5rem;
-  border-radius: 6px;
-
-  #prompt {
-    color: #cba6f7;
-  }
-
-  .operator {
-    color: #fab387;
-  }
-}
-
 // Animation
 .transition-main {
   transition: {
@@ -328,5 +306,115 @@ pre {
 
   &:hover {
     background: rgba(150, 150, 150, 0.6);
+  }
+}
+
+// Accordion (https://codepen.io/abergin/pen/BaKVWd)
+@keyframes flipdown {
+  0% {
+    opacity: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  80% {
+    transform: rotateX(8deg);
+  }
+
+  83% {
+    transform: rotateX(6deg);
+  }
+
+  92% {
+    transform: rotateX(-3deg);
+  }
+
+  100% {
+    transform-origin: top center;
+    transform: rotateX(0deg);
+  }
+}
+
+.accordion {
+  padding: 1rem;
+  margin: 1.5rem 0;
+
+  border-radius: 5px;
+  border: 1px solid $secondary;
+
+  i {
+    position: absolute;
+    margin-left: 1ch;
+    transform: translate(0, 8px);  // hard-coded
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      background: $text;
+      width: 3px;
+      height: 9px;
+      transition: all 0.25s ease-in-out;
+    }
+
+    &::before {
+      transform: translate(-2px, 0) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(2px, 0) rotate(-45deg);
+    }
+  }
+
+  h4 {
+    margin: 0;
+  }
+
+  article {
+    transition: all 0.5s ease-in;
+    transition: opacity 0.1s ease-in;
+
+    & :first-child {
+      transition: margin-top 0.1s ease-in;
+    }
+  }
+
+  input[type="checkbox"] {
+    position: absolute;
+    cursor: pointer;
+    width: min(
+      calc(#{$mainwidth} - #{$mainleftmarg}),
+      calc(100vw - #{$mainleftmarg} - 20px - #{$sidebarwidth})
+    );
+    height: 20px;  // hard-coded
+    z-index: 1;
+    opacity: 0;
+
+    &:checked {
+      &~article {
+        margin-top: 0;
+        max-height: 0;
+        opacity: 0;
+        display: none;
+        transform: translate(0, 50%);
+
+        & :first-child {
+          margin-top: 0;
+        }
+      }
+
+      &~h4 i {
+        &::before {
+          transform: translate(2px, 0) rotate(45deg);
+        }
+
+        &::after {
+          transform: translate(-2px, 0) rotate(-45deg);
+        }
+      }
+    }
   }
 }

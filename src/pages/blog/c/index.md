@@ -1,10 +1,5 @@
 ---
-title: Core Concepts
-layout: base.liquid
----
-
-## Work In Progress
-
+name: "C Programming"
 ---
 
 ### Pointers and Memory
@@ -18,3 +13,11 @@ layout: base.liquid
 
 ### Structs
 - Define a basic struct
+
+### Macros and Preprocessor
+- Understand `#define` for constants and macros
+- Explore compile-time conditional (`#ifdef`, `#ifndef`)
+
+### Debugging and Profiling
+- Use `gdb` for debugging
+- Valgrind for detecting leaks

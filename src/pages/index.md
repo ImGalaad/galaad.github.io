@@ -3,8 +3,8 @@ title: Home
 layout: base.liquid
 ---
 
-<pre>
-<span id="prompt">violette:~$ </span><span class="arg">valkommen.md</span><span class="operator"> &gt;&gt; </span><span class="arg">index.html</span>
+<pre class="language-sh">
+<span class="token keyword">violette:~$ </span><span class="token operator">./main</span> valkommen.md<span class="token function"> &gt;&gt; </span>index.html
 </pre>
 
 ### Hej && Valkommen 💐
