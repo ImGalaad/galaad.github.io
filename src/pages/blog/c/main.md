@@ -27,7 +27,7 @@ int main() {
 
 En réalité nous pouvons faire moins, mais il est fortement conseillé d'utiliser `int` en valeur de retour et explicitement retourner la valeur.
 
-Dans ce cours nous allons apprendre à coder avec des conventions - dont le retour explicite et la compatibilité pour tous les systèmes en font partis - afin de produire du code **lisible**, **expressif** et de **qualité**.
+Dans ce cours nous allons apprendre à coder avec des conventions - dont le retour explicite et la compatibilité pour tous les systèmes en font partie - afin de produire du code **lisible**, **expressif** et de **qualité**.
 </article>
 </section>
 
