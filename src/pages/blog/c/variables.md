@@ -43,7 +43,7 @@ Les types de données les plus courants en C sont :
     <h4>Petit +<i></i></h4>
 <article>
 
-Il n'y a pas de type `string` à proprement parlé, si nous voulons créer une chaîne de caractères, nous devons la définir plus précisement pour la mémoire. En général, elles sont représentées par un tableau de caractères, comme ceci:
+Il n'y a pas de type `string` à proprement parler, si nous voulons créer une chaîne de caractères, nous devons la définir plus précisement pour la mémoire. En général, elles sont représentées par un tableau de caractères, comme ceci:
 ```c
 char nom[] = "Heisenberg";
 ```
