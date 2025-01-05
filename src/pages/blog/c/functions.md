@@ -15,7 +15,7 @@ int multiplication(int x, int y) {
 Dans cet exemple, la fonction `multiplication` est déclarée avec le type de retour `int` et les paramètres `x` et `y`. La fonction retourne tout simplement le produit de `x` et `y`. Bien-sûr, ce n'est qu'un exemple pour comprendre comment construire une fonction, n'utilisez pas cette fonction à chaque fois que vous multipliez deux `int`, utilisez simplement `*`.
 <br>
 
-<section class="accordion">
+<section class="accordion" optional>
     <input type="checkbox" checked>
     <h4>Équivalent en Python & Ocaml<i></i></h4>
 <article>
@@ -51,7 +51,7 @@ int facto(int x) {
 ```
 Dans cet exemple, la fonction `facto` est déclarée avec le type de retour `int` et le paramètre `x`. La fonction retourne la factorielle de `x`.
 
-<section class="accordion">
+<section class="accordion" optional>
     <input type="checkbox" checked>
     <h4>Équivalent en Python & Ocaml<i></i></h4>
 <article>

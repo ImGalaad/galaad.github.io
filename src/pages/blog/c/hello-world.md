@@ -11,7 +11,7 @@ Maintenant que vous avez installé GCC et un environnement de développement int
 **Qu'est-ce que le programme "Hello, World !"?** <br>
 Le programme "Hello, World !" est un programme traditionnel qui est souvent utilisé pour introduire les débutants à un nouveau langage de programmation et vérifier si l'environnement est correctement configuré. Il s'agit d'un programme simple qui affiche "Hello, World !" à l'écran.
 
-Voici un exmple en Python:
+Voici un exemple en Python:
 ```py
 print("Hello, World!")
 ```

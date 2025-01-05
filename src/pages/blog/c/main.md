@@ -20,7 +20,7 @@ int main() {
 ```
 > *Ce code ne fait rien, à part retourner 0*
 
-<section class="accordion">
+<section class="accordion" optional>
     <input type="checkbox" checked>
     <h4>Note<i></i></h4>
 <article>
@@ -30,4 +30,3 @@ En réalité nous pouvons faire moins, mais il est fortement conseillé d'utilis
 Dans ce cours nous allons apprendre à coder avec des conventions - dont le retour explicite et la compatibilité pour tous les systèmes en font partie - afin de produire du code **lisible**, **expressif** et de **qualité**.
 </article>
 </section>
-

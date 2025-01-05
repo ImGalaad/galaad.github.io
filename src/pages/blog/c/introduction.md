@@ -1,7 +1,8 @@
 ---
-title: 1. Introduction to C
+title: 1.0 Introduction to C
 layout: base.liquid
 
+prev: /blog/c/welcome
 next: /blog/c/installation
 ---
 
@@ -10,7 +11,9 @@ next: /blog/c/installation
 <section class="accordion">
     <input type="checkbox" checked>
     <h4>Lorem ipsum<i></i></h4>
-    <article></article>
+<article>
+
+</article>
 </section>
 
 -->
@@ -25,6 +28,27 @@ C'est un choix populaire pour la programmation système et d'autres applications
 - **Programmation procédurale** : C met l'accent sur les procédures et les fonctions
 
 C a eu un impact significatif sur l'informatique et la conception de logiciels, et est encore largement utilisé aujourd'hui.
+
+
+<section class="accordion" optional>
+    <input type="checkbox" checked>
+    <h4>C for Python or Ocaml devs<i></i></h4>
+<article>
+
+| Feature | 🐍 Python | 🐫 OCaml | ⚙️ C |
+|---|---|---|---|
+| **Execution model** | Interpreted (bytecode runs on a [virtual machine](/blog/lexicon/vm)) | Compiled (to native code or bytecode for the OCaml runtime) | Compiled (translates to machine code) |
+| **Memory management** | Automatic ([garbage collection](/blog/lexicon/gc)) | Automatic ([garbage collection](/blog/lexicon/gc)) | Manual (explicit allocation and deallocation) |
+| **Typing** | Dynamic (type checked at runtime) | Static (strongly typed, with type inference) | Static (type checked at compile time) |
+| **Syntax** | High-level, simple, and expressive | High-level, concise, functional, and expressive | Low-level, verbose, with manual structuring |
+| **Standard library** | Extensive and built-in | Moderate, functional and imperative utilities included | Minimal, relies on third-party libraries |
+| **Pointers** | Not directly exposed | Not directly exposed, abstracted by values and references | Core concept for memory and addressing |
+| **Error handling** | Exceptions | Exceptions and pattern matching (expressive error handling) | Return codes and error flags |
+| **Use case** | Rapid development, scripting, web development | Functional programming, compiler design, theorem proving, static analysis | Systems programming, embedded systems, performance-critical applications | 
+
+Inspiration: [Nim for Python Programmers](https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers)   
+</article>
+</section>
 
 
 <section class="accordion">
@@ -42,27 +66,6 @@ It's a popular choice for systems programming and other applications where perfo
 - **Procedural programming**: C emphasizes on procedures and functions
 
 C has had a significant impact on computer science and software engineering, and is still widely used today.
-</article>
-</section>
-
-
-<section class="accordion">
-    <input type="checkbox" checked>
-    <h4>C for Python or Ocaml devs<i></i></h4>
-<article>
-
-| Feature | 🐍 Python | 🐫 OCaml | ⚙️ C |
-|---|---|---|---|
-| **Execution model** | Interpreted (bytecode runs on a [virtual machine](/blog/lexicon/vm)) | Compiled (to native code or bytecode for the OCaml runtime) | Compiled (translates to machine code) |
-| **Memory management** | Automatic ([garbage collection](/blog/lexicon/gc)) | Automatic ([garbage collection](/blog/lexicon/gc)) | Manual (explicit allocation and deallocation) |
-| **Typing** | Dynamic (type checked at runtime) | Static (strongly typed, with type inference) | Static (type checked at compile time) |
-| **Syntax** | High-level, simple, and expressive | High-level, concise, functional, and expressive | Low-level, verbose, with manual structuring |
-| **Standard library** | Extensive and built-in | Moderate, functional and imperative utilities included | Minimal, relies on third-party libraries |
-| **Pointers** | Not directly exposed | Not directly exposed, abstracted by values and references | Core concept for memory and addressing |
-| **Error handling** | Exceptions | Exceptions and pattern matching (expressive error handling) | Return codes and error flags |
-| **Use case** | Rapid development, scripting, web development | Functional programming, compiler design, theorem proving, static analysis | Systems programming, embedded systems, performance-critical applications | 
-
-Inspiration: [Nim for Python Programmers](https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers)   
 </article>
 </section>
 

@@ -6,7 +6,7 @@ https://catppuccin.com/palette */
 /* PrismJS 1.29.0
 https://prismjs.com/download.html#themes=prism-tomorrow&languages=clike+c */
 
-$bg: #23292c;
+$bg: #1b1a1b;
 $fg: #eaeaea;
 
 $comment: #7f849c;
@@ -27,6 +27,7 @@ pre {
   border-radius: 6px;
 
   width: fit-content;
+  max-width: 100%;
 
   font-family: monospace;
   font-size: 16px;

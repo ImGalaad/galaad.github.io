@@ -63,7 +63,7 @@ La boucle `for` est composée de trois parties:
 - **La condition** : c'est la condition qui doit être vraie pour que la boucle continue. Dans cet exemple, la condition est `x < 10`.
 - **La mise à jour** : c'est l'opération qui est effectuée à chaque itération de la boucle. Dans cet exemple, `x` est incrémenté de 1 à chaque itération.
 
-<section class="accordion">
+<section class="accordion" optional>
     <input type="checkbox" checked>
     <h4>Équivalent en Python & Ocaml<i></i></h4>
 <article>
@@ -134,7 +134,7 @@ for (int x = 0; x < 10; x++) {
 ```
 > *Cet exemple affiche les valeurs de x de 0 à 9 à part 5.*
 
-<section class="accordion">
+<section class="accordion" optional>
     <input type="checkbox" checked>
     <h4>Petit +<i></i></h4>
 <article>

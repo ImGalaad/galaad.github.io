@@ -8,6 +8,7 @@ pre {
   background: 0 0;
   border-radius: 6px;
   width: fit-content;
+  max-width: 100%;
   font-family: monospace;
   font-size: 16px;
   text-align: left;
@@ -45,7 +46,7 @@ pre {
 
 :not(pre) > code,
 pre {
-  background: #23292c;
+  background: #1b1a1b;
 }
 
 :not(pre) > code {
@@ -399,6 +400,7 @@ html.is-leaving .transition-main {
   margin: 1.5rem 0;
   border-radius: 5px;
   border: 1px solid #79366e;
+  overflow: scroll;
 }
 .accordion i {
   position: absolute;
@@ -421,6 +423,13 @@ html.is-leaving .transition-main {
 }
 .accordion h4 {
   margin: 0;
+}
+.accordion[optional] h4::before {
+  color: #bdb2ca;
+  opacity: 0.75;
+  font-size: 14px;
+  font-style: italic;
+  content: "Optionnel ";
 }
 .accordion article {
   transition: all 0.5s ease-in;

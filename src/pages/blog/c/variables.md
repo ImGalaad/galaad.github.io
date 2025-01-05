@@ -12,7 +12,7 @@ int x = 42;
 ```
 Dans cet exemple, la variable `x` est déclarée avec le type `int` et la valeur `42`. La syntaxe suit donc ce paterne `type nom = valeur;`. <br>
 
-<section class="accordion">
+<section class="accordion" optional>
     <input type="checkbox" checked>
     <h4>Équivalent en Python & Ocaml<i></i></h4>
 <article>
@@ -40,14 +40,65 @@ Les types de données les plus courants en C sont :
 
 <section class="accordion">
     <input type="checkbox" checked>
-    <h4>Petit +<i></i></h4>
+    <h4>struct<i></i></h4>
+<article>
+
+Les types structurés sont comme ceux en Ocaml:
+```c
+struct Human {
+    int age;
+    float height;
+};
+```
+**Utilisation:**
+```c
+struct Human bob = { .age = 24, .height = 847.0 };
+```
+
+Human n'est pas directement un type, nous pouvons le voir grâce au `struct` juste avant `Human`. Afin de ne pas avoir à mettre à chaque fois `struct`, nous pouvons utiliser `typedef`:
+```c
+typedef struct Human {
+    int age;
+    float height;
+} Human;
+
+Human jean = { .age = -73, .height = 176.0 };
+```
+C'est bien plus clair! <br>
+*Ici, le premier `Human` définit le nom de la structure de donnée, et le deuxième est le nom du type.*
+</article>
+</section>
+
+<section class="accordion">
+    <input type="checkbox" checked>
+    <h4>enum<i></i></h4>
+<article>
+
+Pareil que pour `struct`, c'est comme en Ocaml:
+```c
+enum Days {
+    Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+};
+```
+*La représentation en mémoire est simplement un entier, de 0 à 6 ici.*
+
+**Utilisation:**
+```c
+enum Days day = Sunday;
+```
+</article>
+</section>
+
+<section class="accordion" optional>
+    <input type="checkbox" checked>
+    <h4>Et les strings ?<i></i></h4>
 <article>
 
 Il n'y a pas de type `string` à proprement parler, si nous voulons créer une chaîne de caractères, nous devons la définir plus précisement pour la mémoire. En général, elles sont représentées par un tableau de caractères, comme ceci:
 ```c
 char nom[] = "Heisenberg";
 ```
-Ici nous avons utilisé `char`, malheureusement ce n'est qu'un seul caractère, pas suffisant pour écrire Heisenberg, alors nous ajoutons `[]` après le nom de la variable pour définir un `array`, mais il faut attendre 3 chapitres pour plus d'explications ;)
+Ici nous avons utilisé `char`, malheureusement ce n'est qu'un seul caractère, pas suffisant pour écrire "Heisenberg", alors nous ajoutons `[]` après le nom de la variable pour définir un `array`. *Mais il faut attendre 3 chapitres pour plus d'explications ;)*
 </article>
 </section>
 <br>

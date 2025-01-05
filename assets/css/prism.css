@@ -8,6 +8,7 @@ pre {
   background: 0 0;
   border-radius: 6px;
   width: fit-content;
+  max-width: 100%;
   font-family: monospace;
   font-size: 16px;
   text-align: left;
@@ -45,7 +46,7 @@ pre {
 
 :not(pre) > code,
 pre {
-  background: #23292c;
+  background: #1b1a1b;
 }
 
 :not(pre) > code {

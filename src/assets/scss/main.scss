@@ -347,6 +347,8 @@ main {
   border-radius: 5px;
   border: 1px solid $secondary;
 
+  overflow: scroll;
+
   i {
     position: absolute;
     margin-left: 1ch;
@@ -372,6 +374,14 @@ main {
 
   h4 {
     margin: 0;
+  }
+
+  &[optional] h4::before {
+    color: $dim;
+    opacity: 0.75;
+    font-size: 14px;
+    font-style: italic;
+    content: "Optionnel ";
   }
 
   article {
