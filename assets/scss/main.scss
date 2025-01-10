@@ -3,7 +3,7 @@
 
 // Calm
 $text: #e9e1f2;
-$dim: #bdb2ca;
+$dim: #a29ca8;
 $bg: #0f0e10;
 $primary: #bda1d5;
 $secondary: #79366e;
@@ -33,6 +33,10 @@ body {
   @include sm {
     font-size: 14px;
   }
+}
+
+tr > td {
+  padding-bottom: 2rem;
 }
 
 a {
@@ -244,7 +248,7 @@ main {
     background: transparent;
 
     color: $text;
-    font-size: 18px;
+    font-size: 16px;
     font-family: sans-serif;
 
     border: $secondary 2px solid;
@@ -254,10 +258,12 @@ main {
     margin-right: 0.5rem;
     margin-top: 1.5rem;
 
-    width: 300px;
+    min-width: 300px;
 
     &::before {
       white-space: pre;
+
+      font-size: 14px;
 
       color: $primary;
       font-size: 18px;
@@ -352,7 +358,11 @@ main {
   i {
     position: absolute;
     margin-left: 1ch;
-    transform: translate(0, 8px);  // hard-coded
+    transform: translate(0, 7px);  // hard-coded
+
+    @include mm {
+      transform: translate(0, 4px);  // hard-coded
+    }
 
     &::before, &::after {
       content: "";
@@ -403,6 +413,10 @@ main {
     height: 20px;  // hard-coded
     z-index: 1;
     opacity: 0;
+
+    @include mm {
+      width: 100vw;
+    }
 
     &:checked {
       &~article {

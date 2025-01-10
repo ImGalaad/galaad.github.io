@@ -149,6 +149,10 @@ body {
   }
 }
 
+tr > td {
+  padding-bottom: 2rem;
+}
+
 a {
   color: #e9e1f2;
   cursor: pointer;
@@ -171,7 +175,7 @@ a[target=_blank]::after {
 }
 
 em {
-  color: #bdb2ca;
+  color: #a29ca8;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -321,17 +325,18 @@ main a:has(.nextlink, .prevlink) {
 main .nextlink, main .prevlink {
   background: transparent;
   color: #e9e1f2;
-  font-size: 18px;
+  font-size: 16px;
   font-family: sans-serif;
   border: #79366e 2px solid;
   border-radius: 10px;
   padding: 0.5rem;
   margin-right: 0.5rem;
   margin-top: 1.5rem;
-  width: 300px;
+  min-width: 300px;
 }
 main .nextlink::before, main .prevlink::before {
   white-space: pre;
+  font-size: 14px;
   color: #bda1d5;
   font-size: 18px;
   font-family: sans-serif;
@@ -405,7 +410,12 @@ html.is-leaving .transition-main {
 .accordion i {
   position: absolute;
   margin-left: 1ch;
-  transform: translate(0, 8px);
+  transform: translate(0, 7px);
+}
+@media only screen and (max-width: 1000px) {
+  .accordion i {
+    transform: translate(0, 4px);
+  }
 }
 .accordion i::before, .accordion i::after {
   content: "";
@@ -425,7 +435,7 @@ html.is-leaving .transition-main {
   margin: 0;
 }
 .accordion[optional] h4::before {
-  color: #bdb2ca;
+  color: #a29ca8;
   opacity: 0.75;
   font-size: 14px;
   font-style: italic;
@@ -445,6 +455,11 @@ html.is-leaving .transition-main {
   height: 20px;
   z-index: 1;
   opacity: 0;
+}
+@media only screen and (max-width: 1000px) {
+  .accordion input[type=checkbox] {
+    width: 100vw;
+  }
 }
 .accordion input[type=checkbox]:checked ~ article {
   margin-top: 0;

@@ -1,6 +1,8 @@
 ---
 title: Beginning in the world of computer science
 layout: base.liquid
+
+next: /blog/cs/os
 ---
 
 ### Introduction
@@ -12,6 +14,3 @@ So I'm going to recommend some tools and sources, there are thousands of ways to
 
 ### Your system
 First of all, you need a computer, by definition, a computer is “an automatic machine for processing information”, so a tablet or a phone works too :)
-
-<!-- <a href="/"><button class="prevlink">Example</button></a> -->
-<a href="/blog/cs/os/"><button class="nextlink">Operating System</button></a>

@@ -6,8 +6,10 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 
 module.exports = function (config) {
+  // Colorize the code
   config.addPlugin(syntaxHighlight);
 
+  // Minify each .html
   config.addTransform("htmlmin", function(content, outputPath) {
     if (outputPath && outputPath.endsWith(".html")) {
       let minified = htmlmin.minify(content, {
@@ -20,15 +22,26 @@ module.exports = function (config) {
     return content;
   });
 
-  // Ignore compilation
+  // Makes external links open in a new tab
+  config.addTransform("externalLinks", function(content) {
+    return content.replace(/<a href="([^"]+)"([^>]*)>/g, function(match, href, attributes) {
+      if (href.startsWith("http://") || href.startsWith("https://")) {
+        return `<a href="${href}" target="_blank" rel="noopener noreferrer"${attributes}>`;
+      }
+      return match;
+    });
+  });
+
+  // Ignore assets compilation
   config.addPassthroughCopy("assets");
 
-  // Add collections
+  // Add all pages collection
   config.addCollection("pages", function (collections) {
     const pages = collections.getFilteredByGlob("pages/**/*.{md,html}");
     return pages;
   });
 
+  // Add blogs grouped collection
   config.addCollection("blogs", function (collections) {
     const posts = collections.getFilteredByGlob("pages/blog/**/*.{md,html}");
     const groups = [];
@@ -54,6 +67,7 @@ module.exports = function (config) {
     return groups;
   });
 
+  // Add root pages collection
   config.addCollection("root", function (collections) {
     return collections.getFilteredByGlob("pages/*");
   });
