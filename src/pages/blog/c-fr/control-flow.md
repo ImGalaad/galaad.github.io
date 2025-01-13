@@ -27,15 +27,15 @@ if (x > 10) {
     printf("x est supérieur à 10\n");
 }
 
-else if (x > 5) {
-    printf("x est entre 6 et 10\n");
+else if (x == 8 || x == 9) {
+    printf("x est 8 ou 9\n");
 }
 
 else {
     printf("x est inférieur à 5\n");
 }
 ```
-> *Cet exemple affiche "x est entre 5 et 10" car la condition x > 10 est fausse et la condition x >= 8 est vraie.*
+> *Cet exemple affiche "x est 8 ou 9" car la condition x > 10 est fausse et la condition x == 8 || x == 9 est vraie.*
 
 <section class="accordion" optional>
     <input type="checkbox" checked>
