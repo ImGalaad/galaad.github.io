@@ -9,10 +9,10 @@ next: /blog/c-fr/comments
 Tout programme C commence par la fonction `main` ("principal" en anglais). C'est la fonction qui est appelée lorsque le programme est exécuté.
 <br>
 
-En C, on ne code presque jamais en dehors de fonctions. En Ocaml ou Python, il n'y a pas besoin de `main` car tout le code qui est écrit s'exécute, mais ici, chaque expression est écrite dans le `main` ou une autre fonction.
+En C, on ne code presque jamais en dehors de fonctions. En Ocaml ou Python, il n'y a pas besoin de `main` car tout le code qui est écrit s'exécute, mais ici, chaque expression est écrite dans le `main` ou une autre fonction appelée dans `main`.
 <br>
 
-Voici un exemple de code minimal :
+Voici un code minimal :
 ```c
 int main() {
     return 0;

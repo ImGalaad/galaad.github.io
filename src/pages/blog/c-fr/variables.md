@@ -6,7 +6,7 @@ prev: /blog/c-fr/comments
 next: /blog/c-fr/functions
 ---
 
-Les variables sont des espaces qui permettent de stocker des valeurs. En C, les variables sont déclarées avec un type, un nom et une valeur; la valeur peut être modifiée à tout moment, contrairement à Ocaml. Voici un exemple :
+Les variables sont des espaces qui permettent de stocker des valeurs. En C, les variables sont déclarées avec un type, un nom et une valeur; la valeur peut être modifiée à tout moment, contrairement à Ocaml. Voici un exemple:
 ```c
 int x = 42;
 ```
@@ -60,10 +60,15 @@ typedef struct Human {
     float height;
 } Human;
 
-Human jean = { .age = -73, .height = 176.0 };
+Human jean = { .age = 73, .height = 176.0 };
 ```
 C'est bien plus clair! <br>
 *Ici, le premier `Human` définit le nom de la structure de donnée (optionel), et le deuxième est le nom du type.*
+
+Voici comment accéder à un élement de la structure:
+```c
+jean.age;  // donne ici 73
+```
 </article>
 </section>
 
@@ -96,7 +101,7 @@ Il n'y a pas de type `string` à proprement parler, si nous voulons créer une c
 ```c
 char nom[] = "Heisenberg";
 ```
-Ici nous avons utilisé `char`, malheureusement ce n'est qu'un seul caractère, pas suffisant pour écrire "Heisenberg", alors nous ajoutons `[]` après le nom de la variable pour définir un `array`. *Mais il faut attendre 3 chapitres pour plus d'explications ;)*
+Ici nous avons utilisé `char`, malheureusement ce n'est qu'un seul caractère, pas suffisant pour écrire "Heisenberg", alors nous ajoutons `[]` après le nom de la variable pour définir un `array`. *Mais il faut attendre le chapitre 6.0 pour plus d'explications ;)*
 </article>
 </section>
 <br>
@@ -143,12 +148,12 @@ De plus, il existe des opérateurs binaires afin d'effectuer des opérations qui
 <br>
 
 - `!` : [NOT](https://fr.wikipedia.org/wiki/Fonction_NON)
-- `&` : [AND](https://fr.wikipedia.org/wiki/Fonction_ET)
-- `|` : [OR](https://fr.wikipedia.org/wiki/Fonction_OU)
+- `&&` : [AND](https://fr.wikipedia.org/wiki/Fonction_ET)
+- `||` : [OR](https://fr.wikipedia.org/wiki/Fonction_OU)
 - `^` : [XOR](https://fr.wikipedia.org/wiki/Fonction_OU_exclusif)
 
 
-Il existe pour chaque opérateur une version dite "immédiate", cela veut dire qu'on applique directement l'opération sur la variable. Voici un exemple:
+Il existe pour chaque opérateur une version dite "immédiate", cela veut dire qu'on applique directement l'opération sur la variable:
 ```c
 int x = 420;
 

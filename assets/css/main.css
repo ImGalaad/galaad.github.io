@@ -308,6 +308,9 @@ main {
     width: calc(100vw - 1rem - 20px);
   }
 }
+main img {
+  max-width: min(calc(min(960px, 90vw) - 5rem), calc(100vw - 5rem - 20px - 360px));
+}
 main h1 {
   font-style: italic;
   text-underline-offset: 6px;

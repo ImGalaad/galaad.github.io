@@ -1,12 +1,12 @@
 ---
-title: 3.5 Structure de contrôle
+title: 3.5 Structures de contrôle
 layout: base.liquid
 
 prev: /blog/c-fr/functions
 next: /blog/c-fr/macros
 ---
 
-Les structures de contrôle sont des instructions qui permettent de se "déplacer" différement dans le code. Elles sont essentielles dans beaucoup de cas. Les structures de contrôle les plus courantes sont:
+Les structures de contrôle sont des instructions qui permettent de se "déplacer" différement dans le code. Les structures de contrôle les plus courantes sont:
 
 ### if
 Instruction conditionnelle qui permet de choisir entre plusieurs actions en fonction d'une condition. **N'oubliez pas de mettre votre condition entre parenthèses!**
@@ -19,7 +19,7 @@ if (x > 10) {
 ```
 > *Cet exemple affiche "x est supérieur à 10" car la condition x > 10 est vraie.*
 
-Vous pouvez également utiliser `else` ou `else if` pour ajouter des conditions supplémentaires:
+Vous pouvez également utiliser `else` et `else if` pour ajouter des conditions supplémentaires:
 ```c
 int x = 8;
 
@@ -60,6 +60,9 @@ Source: [Wikipedia](https://en.wikipedia.org/wiki/Ternary_conditional_operator)
 </article>
 </section>
 
+<br>
+<br>
+
 ### while
 Instruction de répétition qui permet de répéter une action tant qu'une condition est vraie.
 ```c
@@ -71,6 +74,9 @@ while (x < 5) {
 }
 ```
 > *Cet exemple affiche "Bonjour !" 5 fois.*
+
+<br>
+<br>
 
 ### for
 Instruction de répétition qui permet de répéter une action un certain nombre de fois.
@@ -111,8 +117,11 @@ Ocaml:
 </article>
 </section>
 
+<br>
+<br>
+
 ### switch
-Instruction de sélection qui permet de choisir entre plusieurs actions en fonction d'une valeur et d'éviter de trop utiliser `if` et `else`. **Ne pas oublier le break à la fin de chaque cas!**
+Instruction de sélection qui permet de choisir entre plusieurs actions en fonction d'une valeur et peut éviter de trop utiliser `if` et `else`. **Ne pas oublier le break à la fin de chaque cas!**
 ```c
 int x = 2;
 
@@ -132,6 +141,9 @@ switch (x) {
 ```
 > *Cet exemple affiche "x est égal à 2".*
 
+<br>
+<br>
+
 ### break
 Instruction de sortie qui permet de sortir d'une boucle ou d'une instruction de sélection (comme en Python). **N'est pas autorisé à l'Université de Poitiers!**
 ```c
@@ -139,10 +151,13 @@ for (int x = 0; x < 10; x++) {
     if (x == 5) {
         break;
     }
-    printf("x est égal à %d\n", x);
+    printf("%d\n", x);
 }
 ```
 > *Cet exemple affiche les valeurs de x de 0 à 4.*
+
+<br>
+<br>
 
 ### continue
 Instruction de poursuite qui permet de passer à l'itération suivante d'une boucle (comme en Python). **N'est pas autorisé à l'Université de Poitiers!**
@@ -151,7 +166,7 @@ for (int x = 0; x < 10; x++) {
     if (x == 5) {
         continue;
     }
-    printf("x est égal à %d\n", x);
+    printf("%d\n", x);
 }
 ```
 > *Cet exemple affiche les valeurs de x de 0 à 9 à part 5.*
@@ -167,9 +182,10 @@ Instruction de répétition comme `while` mais la condition est vérifiée à la
 int x = 0;
 
 do {
-    printf("x est égal à %d\n", x);
     x++;
+    printf("%d\n", x);
 } while (x < 10);
-```    
+```
+> *Cet exemple affiche les valeurs de x de 1 à 10.*
 </article>
 </section>

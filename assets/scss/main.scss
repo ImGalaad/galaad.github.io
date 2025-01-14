@@ -228,6 +228,13 @@ main {
     width: calc(100vw - #{$mainleftmarg} - 20px);
   }
 
+  img {
+    max-width: min(
+      calc(#{$mainwidth} - #{$mainleftmarg}),
+      calc(100vw - #{$mainleftmarg} - 20px - #{$sidebarwidth})
+    );
+  }
+
   h1 {
     font-style: italic;
     text-underline-offset: 6px;

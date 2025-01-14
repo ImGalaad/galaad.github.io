@@ -20,8 +20,11 @@ next: /blog/c-fr/hello-world
 - Installez GCC : ouvrez un terminal et exécutez `gcc --version` pour vérifier si GCC est installé. Si ce n'est pas le cas, exécutez `xcode-select --install` pour installer le compilateur GCC. -->
 
 #### 🪟 Windows :
-[Les conseils de Raysan5](https://github.com/raysan5/raylib/wiki/Working-on-Windows#mingw-w64gcc) *vous n'êtes pas obligés d'installer Raylib*
+Suivez les instructions du cours de l'Université de Poitiers
 
+**ou**
+
+[Les conseils de Raysan5](https://github.com/raysan5/raylib/wiki/Working-on-Windows#mingw-w64gcc) *vous n'êtes pas obligés d'installer Raylib*
 
 <!-- <section class="accordion">
     <input type="checkbox" checked>

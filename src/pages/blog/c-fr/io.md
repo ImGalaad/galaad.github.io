@@ -1,5 +1,5 @@
 ---
-title: 5. I/O
+title: 5.0 I/O
 layout: base.liquid
 
 prev: /blog/c-fr/macros
@@ -9,12 +9,14 @@ next: /blog/c-fr/arrays
 L'entrée/sortie (I/O, "input/output" en anglais) est un concept fondamental en programmation qui permet à un programme de communiquer avec l'utilisateur ou avec d'autres programmes (par exemple avec l'[OS](/blog/lexicon/os)). Comme nous l'avons vu dans le chapitre précedent, C contient la librairie **stdio.h** qui permet de gérer l'I/O. Nous n'allons définir et expliquer que deux fonctions dans ce chapitre.
 
 ### printf
-La fonction `printf` permet d'afficher des messages sur la console. Elle n'a pas de limite du nombre d'arguments, le premier est un `char[]`, il décrit le format final:
+Nous l'avons déjà vu celle-ci, elle permet d'afficher des messages sur la console. Elle n'a pas de limite du nombre d'arguments, le premier est un `char[]`, il décrit le format final:
 ```c
-printf("Avec ses pneus profilés, qui adhèrent au bitume comme le bigorneau adhère au rocher...");
+printf("Avec ses pneus profilés, qui adhèrent au bitume comme le bigorneau adhère au rocher.");
+
+printf("Le nombre d'or (φ) est à peu près égal à %f", 1.6180339887);
 ```
 
-La "chaîne de format" peut contenir des **spécificateurs** qui indiquent le type de données à afficher. Voici quelques-uns des spécificateurs de format pour les types les plus courants:
+La "chaîne de format" peut contenir des **spécificateurs** qui indiquent le type de données à afficher (afin de correctement convertir en chaîne de caractères). Voici quelques-uns des spécificateurs de format pour les types les plus courants:
 - `%d` ou `%i`: int
 - `%f`: float
 - `%c`: char
@@ -59,9 +61,7 @@ print(f"Je m'appelle {name} et j'ai {age} ans. Je pèse {weight:.2f} kg.")
 
 ### scanf
 
-La fonction `scanf` quant à elle fait "l'inverse" car elle demande dans la console d'entrer du texte.
-
-Voici un exemple d'utilisation:
+La fonction `scanf` quant à elle fait "l'inverse" car elle demande dans la console d'entrer du texte:
 ```c
 #include <stdio.h>
 
@@ -75,9 +75,9 @@ int main() {
     return 0;
 }
 ```
-Ici le programme demande à l'utilisateur d'entrer un nombre entier dans la console (avec `scanf`) avec un petit message (avec `printf`). Vous voyez le petit symbole `&` juste avant `age` ? Et bien nous le verrons dans le chapitre sur les pointeurs, n'ayez pas peur c'est plus simple qu'on peut le croire!
+Ici le programme demande à l'utilisateur d'entrer un nombre entier dans la console (avec `scanf`) accompagné d'un petit message (avec `printf`). Vous voyez le petit symbole `&` juste avant `age` ? Et bien nous le verrons dans le chapitre sur les pointeurs, n'ayez pas peur c'est plus simple qu'on peut le croire!
 
-*Note: La fonction `scanf` peut être "dangeureuse", car si on ne rentre pas une valeur correcte, l'ordinateur ne va pas être content. Heureusement les systèmes d'opération modernes savent très bien gérer ces problèmes, mais ce n'est pas une raison pour ne pas réflechir aux éventualités de crash.*
+*Note: La fonction `scanf` peut être "dangeureuse", car si on ne rentre pas une valeur correcte, l'ordinateur ne va pas être content. Heureusement les systèmes d'exploitation (OS) modernes savent très bien gérer ces problèmes, mais ce n'est pas une raison pour ne pas réflechir aux éventualités de crash.*
 
 <section class="accordion" optional>
     <input type="checkbox" checked>

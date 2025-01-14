@@ -6,7 +6,7 @@ prev: /blog/c-fr/include
 next: /blog/c-fr/io
 ---
 
-La macro `#define` permet de définir (et oui!) du texte à remplacer pendant la compilation, comme avec `#include` mais ici c'est un simple texte. Voici un exemple d'utilisation:
+La macro `#define` permet de définir (et oui!) du texte à remplacer pendant la compilation, comme avec `#include` mais ici c'est un simple texte:
 
 ```c
 #include <stdio.h>
@@ -32,10 +32,11 @@ printf("π = %f", 3.14159);
 </article>
 </section>
 
-Nous pouvons aussi ajouter des arguments et même des expressions. Voici un exemple:
+Nous pouvons aussi ajouter des arguments et même des expressions:
 ```c
 #define MAX(a, b) a > b ? a : b
 ```
+*Ici `MAX(1, 2)` sera remplacé par `1 > 2 ? 1 : 2` (donc `2`).* <br>
 *Cela permet d'avoir une sorte de fonction sans type, donc utilisable avec des `int` et `float`.*
 
 <section class="accordion">
